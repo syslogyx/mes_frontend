@@ -1,0 +1,39 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/smart-app/dist
+/smart-app/tmp
+/smart-app/out-tsc
+
+# dependencies
+/smart-app/node_modules
+
+# IDEs and editors
+/smart-app/.idea
+/smart-app/.project
+/smart-app/.classpath
+/smart-app/.c9/
+/smart-app/*.launch
+/smart-app/.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+/smart-app/.vscode/*
+/smart-app/!.vscode/settings.json
+/smart-app/!.vscode/tasks.json
+/smart-app/!.vscode/launch.json
+/smart-app/!.vscode/extensions.json
+
+# misc
+/smart-app/.sass-cache
+/smart-app/connect.lock
+/smart-app/coverage
+/smart-app/libpeerconnection.log
+/smart-app/npm-debug.log
+/smart-app/yarn-error.log
+/smart-app/testem.log
+/typings
+
+# System Files
+/smart-app/.DS_Store
+/smart-app/Thumbs.db
