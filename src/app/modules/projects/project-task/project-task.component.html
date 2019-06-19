@@ -1,0 +1,50 @@
+<div class="row" style="padding: 20px">
+  <div class="col-md-6">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-md-6">
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <br>
+  <br>
+  <div class="col-md-6">
+    <mat-checkbox>Check me!</mat-checkbox>
+  </div>
+  <div class="col-md-6">
+    <mat-form-field>
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <br>
+  <br>
+  <div class="col-md-6">
+    <mat-form-field>
+      <mat-label>Toppings</mat-label>
+      <mat-select multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="col-md-6">
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+ .breadcrumb li {
+    display: inline;
+  }
+  .breadcrumb li + li:before {
+    content: " > ";
+    color: black;
+  }
+  .breadcrumb {
+    background-color: #21252900;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .breadcrumb a {
+    color: #dc3545;
+  }
+
+  :host {
+    display: flex;
+  }
+  :host div:first-child {
+    width: 200px;
+  }
+  :host div {
+    display: block;
+  }
+  
+  

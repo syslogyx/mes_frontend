@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <a class="navbar-brand">Smart App</a>
+  <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+    <i class="fa fa-bars text-muted" aria-hidden="true"></i>
+  </button>
+  <div class="collapse navbar-collapse">
+
+    <ul class="navbar-nav ml-auto ntfc">
+      <!-- <li>
+        <button mat-icon-button title="Settings" color="default"  (click)="_toggleSidebar()">
+          <mat-icon matSuffix>settings</mat-icon>
+        </button>
+      </li> -->
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link" href="javascript:void(0)" ngbDropdownToggle>
+          <i class="fa fa-bell"></i>
+          <b class="caret"></b>
+          <span class="sr-only">(current)</span>
+        </a>
+        <ul class="dropdown-menu-right messages notif-main" ngbDropdownMenu *ngIf="notifications">
+          <li class="media" *ngFor="let n of notifications">
+            <div class="media-body">
+              <p class="small text-muted">
+                <i class="fa fa-clock-o"></i>{{n.created}}</p>
+              <p class="last">{{n.description}}</p>
+              <ul *ngIf="n.metadata" class="notif-links">
+                <li>
+                  <a [href]="n.metadata.url">{{n.metadata.label}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown" ngbDropdown>
+        <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+          <i class="fa fa-envelope"></i>
+          <b class="caret"></b>
+          <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu-right" ngbDropdownMenu>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" ngbDropdown>
+        <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+          <i class="fa fa-user"></i> &nbsp;{{loggedInUser && loggedInUser.name}}
+          <b class="caret"></b>
+        </a>
+        <div class="dropdown-menu-right" ngbDropdownMenu>
+          <a class="dropdown-item" href="javascript:void(0)" (click)="showUserProfile()">
+            <i class="fa fa-fw fa-user"></i> {{ 'Profile' }}
+          </a>
+          <a href="" class="dropdown-item" (click)="logout()">
+            <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' }}
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

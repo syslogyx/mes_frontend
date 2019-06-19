@@ -1,0 +1,60 @@
+<!-- <br>
+<br>
+<div mat-dialog-title>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div> -->
+<h5 mat-dialog-title>Project List</h5>
+<div>
+
+  <div class="mat-elevation-z8" mat-dialog-content>
+    <mat-table #table [dataSource]="dataSource">
+
+      <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+      <!-- Sr No Column -->
+      <ng-container matColumnDef="sr_no">
+        <mat-header-cell *matHeaderCellDef> Sr. No. </mat-header-cell>
+        <mat-cell *matCellDef="let element,let i = index;"> {{(currentPage -1)* pageSize + (i+1)}}</mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>}
+        <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+      </ng-container>
+
+      <!-- Client Column -->
+      <ng-container matColumnDef="client">
+        <mat-header-cell *matHeaderCellDef> Client </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.client}} </mat-cell>
+      </ng-container>
+
+      <!-- Start Date Column -->
+      <ng-container matColumnDef="start_date">
+        <mat-header-cell *matHeaderCellDef> Start Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.start_date}} </mat-cell>
+      </ng-container>
+
+      <!-- End date Column -->
+      <ng-container matColumnDef="end_date">
+        <mat-header-cell *matHeaderCellDef> End Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.end_date}} </mat-cell>
+      </ng-container>
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
+<div mat-dialog-actions class="pull-right">
+  <mat-paginator [pageSizeOptions]="pageSizeOptions" [length]="total" [pageSize]="pageSize" (page)="pagination($event)" showFirstLastButtons></mat-paginator>
+</div>

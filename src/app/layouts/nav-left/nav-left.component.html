@@ -1,0 +1,80 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+  <div class="list-group">
+
+    <!-- <a href="" routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-fw fa-home"></i>&nbsp;
+      <span>{{ 'Home' }}</span>
+    </a>
+
+    <div class="nested-menu">
+      <a class="list-group-item" (click)="addExpandClass('users')">
+        <i class="fa fa-users"></i>&nbsp;
+        <span>{{ 'User Management' }}</span>
+      </a>
+      <li class="nested" [class.expand]="showMenu === 'users'">
+        <ul class="submenu">
+          <li>
+            <a href="" routerLink="/users/create" [routerLinkActive]="['router-link-active']">
+              <i class="fa fa-circle"></i>&nbsp;
+              <span>{{ 'Create User' }}</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </div> -->
+
+    <span *ngFor="let menu of menuList">
+      <a href="" routerLink="{{menu.url}}" [routerLinkActive]="['router-link-active']" class="list-group-item" *ngIf="menu.child_menu.length == 0"
+        style="white-space: pre-line">
+        <i class={{menu.icon}}></i>&nbsp;
+        <span>{{ menu.menu_name }}</span>
+      </a>
+
+      <div class="nested-menu" *ngIf="menu.child_menu.length > 0">
+        <a class="list-group-item" (click)="addExpandClass(menu.menu_name)">
+          <i class="{{menu.icon}}"></i>&nbsp;
+          <span>{{ menu.menu_name }}</span>
+        </a>
+        <li class="nested" [class.expand]="showMenu === menu.menu_name" *ngFor="let childMenu of menu.child_menu">
+          <ul class="submenu">
+            <li style="white-space: pre-line">
+              <a href="" routerLink="{{childMenu.url}}" [routerLinkActive]="['router-link-active']">
+                <i class="{{childMenu.icon}}"></i>&nbsp;
+                <span>{{ childMenu.menu_name }}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </span>
+
+    <div class="header-fields">
+
+      <div class="nested-menu">
+        <a class="list-group-item" (click)="addExpandClass('profile')">
+          <span>
+            <i class="fa fa-user"></i>&nbsp; {{currentUser && currentUser.name}}</span>
+        </a>
+        <li class="nested" [class.expand]="showMenu === 'profile'">
+          <ul class="submenu">
+            <li>
+              <a class="dropdown-item" href="javascript:void(0)" (click)="showUserProfile()">
+                <i class="fa fa-fw fa-user"></i> {{ 'Profile' }}
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/auth/login']" (click)="logout()">
+                <span>
+                  <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' }}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+    <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+    <span>{{ 'Collapse Sidebar' }}</span>
+  </div>
+</nav>

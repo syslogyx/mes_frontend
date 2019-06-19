@@ -1,0 +1,57 @@
+:host .navbar {
+    background-color: black;
+  }
+  :host .navbar .navbar-brand {
+    color: #fff;
+  }
+  :host .navbar .nav-item > a {
+    color: #999;
+  }
+  :host .navbar .nav-item > a:hover {
+    color: #fff;
+  }
+  :host .messages {
+    width: 300px;
+  }
+  :host .messages .media {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+  }
+  :host .messages .media:last-child {
+    border-bottom: none;
+  }
+  :host .messages .media-body h5 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  :host .messages .media-body .small {
+    margin: 0;
+  }
+  :host .messages .media-body .last {
+    font-size: 12px;
+    margin: 0;
+  }
+  .dropdown-menu {
+    left: auto !important;
+  }
+  .unread-count{
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: .9;
+  }
+  .notif-links{
+    list-style: disc;
+    padding: 0px 18px 0px;
+  }
+  
+  .notif-links li{font-size: 12px;}
+  
+  .notif-main{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow: auto;
+  }

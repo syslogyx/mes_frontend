@@ -1,0 +1,22 @@
+<ng-sidebar-container style="height: 100vh;">
+    <ng-sidebar [(opened)]="_opened" position="right" mode="push">
+        <h4 class="text-center">Settings</h4>
+        <ul>
+            <li>Setting 1</li>
+            <li>Setting 2</li>
+            <li>Setting 3</li>
+        </ul>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+        <app-nav-header></app-nav-header>
+        <app-nav-left (collapsedEvent)="receiveCollapsed($event)"></app-nav-left>
+        <section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
+
+            <app-breadcrumb></app-breadcrumb>
+            <router-outlet></router-outlet>
+            <button mat-icon-button title="Settings" color="default" (click)="_toggleSidebar()" class="pull-right" style="outline: 0px;">
+                <mat-icon matSuffix>settings</mat-icon>
+            </button>
+        </section>
+    </div>
+</ng-sidebar-container>

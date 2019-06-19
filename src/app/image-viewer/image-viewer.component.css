@@ -1,0 +1,9 @@
+.img-div{
+    overflow: hidden;
+    position: relative;
+}
+.close-btn{
+    position: absolute;
+    right: 0;
+    outline: 0px
+}

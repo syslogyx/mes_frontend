@@ -1,0 +1,15 @@
+.client-view-page{
+    padding-left:50px;
+    padding-right:50px;
+
+}
+
+.field-row{
+    padding-bottom: 10px;
+}
+.client-create-page mat-label{
+    font-weight: 600;
+}
+.client-info-div{
+    font-size: 14px;
+}

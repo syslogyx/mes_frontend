@@ -1,0 +1,6 @@
+<div  class="img-div">
+  <button mat-icon-button title="Close" class="close-btn" (click)="dialogRef.close()" color="warn">
+    <mat-icon matSuffix>close</mat-icon>
+  </button>
+  <img [src]="imageSrc" alt="" (error)="nextTab()" style="width: 700px;height: 450px;">
+</div>

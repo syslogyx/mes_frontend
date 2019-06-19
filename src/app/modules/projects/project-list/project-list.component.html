@@ -1,0 +1,113 @@
+<div>
+  <div class="example-header">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <h4 class="pull-left">Project List</h4> -->
+      </div>
+      <div class="col-md-6">
+        <button class="pull-right" mat-raised-button color="primary" [routerLink]="['/project']">Create</button>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-11">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-1">
+      <div class="export-div">
+        <mat-form-field>
+          <mat-label>
+            <i class="fa fa-download"></i>
+          </mat-label>
+          <mat-select title="Export">
+            <mat-option (click)="exportAsExcel()">
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-excel-o"></i> &nbsp;Excel
+              </a>
+            </mat-option>
+            <mat-option (click)="exportAsPdf()">
+              <a href="javascript:void(0)">
+                <i class="fa fa-file-pdf-o"></i> &nbsp;PDF
+              </a>
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <div class="mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+      <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+      <!-- Sr No Column -->
+      <ng-container matColumnDef="sr_no">
+        <mat-header-cell *matHeaderCellDef> Sr. No. </mat-header-cell>
+        <mat-cell *matCellDef="let element,let i = index;"> {{(currentPage -1)* pageSize + (i+1)}}</mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>}
+        <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+      </ng-container>
+
+      <!-- Client Column -->
+      <ng-container matColumnDef="client">
+        <mat-header-cell *matHeaderCellDef> Client </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.client}} </mat-cell>
+      </ng-container>
+
+      <!-- Start Date Column -->
+      <ng-container matColumnDef="start_date">
+        <mat-header-cell *matHeaderCellDef> Start Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.start_date}} </mat-cell>
+      </ng-container>
+
+      <!-- End date Column -->
+      <ng-container matColumnDef="end_date">
+        <mat-header-cell *matHeaderCellDef> End Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.end_date}} </mat-cell>
+      </ng-container>
+
+      <!-- action Column -->
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+
+          <button mat-icon-button title="Upload Project Document" (click)="uploadProjectDoc(element)" color="primary">
+            <mat-icon matSuffix>cloud_upload</mat-icon>
+          </button>
+          <button mat-icon-button title="View Project List" (click)="showProjectList()" color="accent">
+            <mat-icon matSuffix>list</mat-icon>
+          </button>
+          <button mat-icon-button title="View Project Document" (click)="showProjectDocList(element.project_document)" color="primary"
+            [disabled]="!element.project_document.length">
+            <mat-icon matSuffix>list</mat-icon>
+          </button>
+          &nbsp;
+
+        </mat-cell>
+      </ng-container>
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  <br>
+  <mat-paginator [pageSizeOptions]="pageSizeOptions" [length]="total" [pageSize]="pageSize" (page)="pagination($event)" showFirstLastButtons></mat-paginator>
+
+</div>

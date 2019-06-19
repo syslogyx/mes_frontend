@@ -1,0 +1,16 @@
+.img-div{
+    width: 90px;
+    height: 90px;
+    /* background-color: grey; */
+    border-radius: 5px;
+}
+
+.user-info-div{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user-info-div mat-icon{
+    font-size: 15px;
+    margin-bottom: -10px;
+}
