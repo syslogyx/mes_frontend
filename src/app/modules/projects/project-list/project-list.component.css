@@ -1,9 +1,0 @@
- .mat-column-client {
-    flex: 0 0 20% !important;
-    min-width: 10% !important;
-  }
-
- .mat-column-action {
-    flex: 0 0 12% !important;
-    min-width: 5% !important;
-  }
