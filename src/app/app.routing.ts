@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
 import { AppBlankComponent } from './layouts/blank/blank.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { ProductionStatusComponent } from './modules/production-status/production-status.component';
+import { ProcessedCoilsComponent } from './modules/processed-coils/processed-coils.component';
 
 export const AppRoutes: Routes = [
   {
@@ -57,6 +60,22 @@ export const AppRoutes: Routes = [
       {
         path: 'master',
         loadChildren: './modules/settings/masters/masters.module#MastersModule'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'production_status',
+        component: ProductionStatusComponent
+      },
+      {
+        path: 'shift_production_log_book',
+        component: ProductionStatusComponent
+      },
+      {
+        path: 'processed_coils',
+        component: ProcessedCoilsComponent
       }
     ]
   },

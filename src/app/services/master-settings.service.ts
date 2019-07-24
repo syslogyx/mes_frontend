@@ -12,7 +12,7 @@ export class MasterSettingsService {
   constructor(private http: HttpClient, private utility: UtilityService) {
     // set headers.
     this.httpOptions = new HttpHeaders({
-      // "X-AUTH-TOKEN": "",
+      "X-AUTH-TOKEN": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTU2Mzk1OTUwMiwiZXhwIjoxNTYzOTc3NTAyfQ.-frHg8RJXKKLM4aL5Qut6DA1Y9B-LCRKGN5TBjTaSCQ",
       "Content-Type": "application/json",
     });
   }

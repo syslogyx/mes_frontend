@@ -244,7 +244,32 @@ const MENUITEMS = [
   //   ]
   // },
   //Theme menu ends
-
+  // Other Menus Starts here
+  {
+    state: 'dashboard',
+    name: 'Dashboard',
+    type: 'link',
+    icon: 'av_timer'
+  },
+  {
+    state: 'production_status',
+    name: 'Production Status',
+    type: 'link',
+    icon: 'show_chart'
+  },
+  {
+    state: 'shift_production_log_book',
+    name: 'Shift Prod. Log Book',
+    type: 'link',
+    icon: 'book'
+  },
+  {
+    state: 'processed_coils',
+    name: 'Processed Coils',
+    type: 'link',
+    icon: 'panorama_fish_eye'
+  },
+  //Other menus ends here
   //Master Setting Menus starts
   {
     state: "",
