@@ -1,0 +1,113 @@
+<mat-card>
+  <mat-card-content style="padding-bottom: 0px">
+    <mat-card-title>
+      <form [formGroup]="quickFindform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row wrap">
+          <div class="p-10" fxFlex.gt-sm="20" fxFlex.gt-xs="50" fxFlex="100">
+            Code Group
+          </div>
+          <div class="p-10" fxFlex.gt-sm="80" fxFlex.gt-xs="50" fxFlex="100">
+            <a mat-raised-button class="pull-right" color="primary" routerLink="/master/code_group/add">Add New</a>
+          </div>
+        </div>
+        <div fxLayout="row wrap">
+          <div class="p-10" fxFlex.gt-sm="89" fxFlex.gt-xs="50" fxFlex="100">
+            <mat-form-field>
+              <input matInput placeholder="Quick finder" class="form-control quick-find"
+                [formControl]="quickFindform.controls['quick_find']">
+            </mat-form-field>
+          </div>
+          <div class="p-10 m-t-20" fxFlex.gt-sm="11" fxFlex.gt-xs="50" fxFlex="100">
+            <button type="button" mat-mini-fab color="warn" matTooltipPosition="above" matTooltip="Export PDF">
+              <mat-icon>picture_as_pdf</mat-icon>
+            </button>
+            <button type="button" mat-mini-fab class="btn-success pull-right" color="basic" matTooltipPosition="above"
+              matTooltip="Export Excel">
+              <mat-icon>assignment</mat-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </mat-card-title>
+  </mat-card-content>
+
+  <mat-card-content style="padding-top: 0px" class="padding-l-r-10">
+    <div class="responsive-table">
+      <mat-table #table [dataSource]="dataSource">
+
+        <!-- Sr No Column -->
+        <ng-container matColumnDef="sr_no">
+          <mat-header-cell *matHeaderCellDef> Sr. No. </mat-header-cell>
+          <mat-cell *matCellDef="let element,let i = index;"> {{(currentPage -1)* pageSize + (i+1)}}</mat-cell>
+          <mat-cell *matCellDef="let element,let i = index;">
+            <span class="header-label">Sr. No.</span>
+            {{(currentPage -1)* pageSize + (i+1)}}</mat-cell>
+        </ng-container>
+
+        <!-- Group Code Column -->
+        <ng-container matColumnDef="group_code">
+          <mat-header-cell *matHeaderCellDef> Group Code </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Group Code</span>
+            {{element.group_code}}</mat-cell>
+        </ng-container>
+
+        <!-- Group Description Column -->
+        <ng-container matColumnDef="group_desc">
+          <mat-header-cell *matHeaderCellDef> Group Description </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Group Description</span>
+            {{element.group_desc}} </mat-cell>
+        </ng-container>
+
+        <!-- Incrementor Column -->
+        <ng-container matColumnDef="incrementor">
+          <mat-header-cell *matHeaderCellDef> Incrementor </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Incrementor</span>
+            {{element.incrementor}} </mat-cell>
+        </ng-container>
+
+        <!-- Updated By Column -->
+        <ng-container matColumnDef="updated_by_name">
+          <mat-header-cell *matHeaderCellDef> Updated By </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Updated By</span>
+            {{element.updated_by_name}} </mat-cell>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef class="m-l-10"> Status </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Status</span>
+            <mat-slide-toggle [(ngModel)]="element.active" class="m-l-10"></mat-slide-toggle>
+          </mat-cell>
+        </ng-container>
+
+        <!-- action Column -->
+        <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span class="header-label">Action</span>
+            <button type="button" mat-icon-button matTooltip="Edit" (click)="updateMaster(element)" matTooltipPosition="above"
+              color="primary">
+              <mat-icon matSuffix>edit</mat-icon>
+          </button>
+            &nbsp;
+
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+
+    </div>
+    <br>
+    <mat-paginator [pageSizeOptions]="pageSizeOptions" [length]="total" [pageSize]="pageSize"
+      (page)="pagination($event)" showFirstLastButtons></mat-paginator>
+    <!-- <pagination-controls (pageChange)="currentPage = $event;getMasterList()"></pagination-controls> -->
+
+  </mat-card-content>
+</mat-card>

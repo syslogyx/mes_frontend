@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+.btn-success{
+    color: green!important;
+}
+.padding-l-r-10{
+    padding-left: 35px!important;
+    padding-right: 35px!important;
+}
