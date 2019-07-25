@@ -22,12 +22,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
-import { MastersModule } from './modules/settings/masters/masters.module';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { ProductionStatusComponent } from './modules/production-status/production-status.component';
-import { CoilsToProcessComponent } from './modules/coils-to-process/coils-to-process.component';
-import { ShiftProductionLogBookComponent } from './modules/shift-production-log-book/shift-production-log-book.component';
-import { ProcessedCoilsComponent } from './modules/processed-coils/processed-coils.component';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
   wheelSpeed: 2,
@@ -41,12 +36,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppHeaderComponent,
     SpinnerComponent,
     AppBlankComponent,
-    AppSidebarComponent,
-    DashboardComponent,
-    ProductionStatusComponent,
-    CoilsToProcessComponent,
-    ShiftProductionLogBookComponent,
-    ProcessedCoilsComponent
+    AppSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -58,8 +48,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     SharedModule,
     NgMultiSelectDropDownModule.forRoot(),
-    RouterModule.forRoot(AppRoutes),
-    MastersModule
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [
     {

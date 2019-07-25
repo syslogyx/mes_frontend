@@ -258,16 +258,16 @@ const MENUITEMS = [
     icon: 'show_chart'
   },
   {
+    state: 'coils_to_process',
+    name: 'Coils To Process',
+    type: 'link',
+    icon: 'panorama_fish_eye'
+  },
+  {
     state: 'shift_production_log_book',
     name: 'Shift Prod. Log Book',
     type: 'link',
     icon: 'book'
-  },
-  {
-    state: 'processed_coils',
-    name: 'Processed Coils',
-    type: 'link',
-    icon: 'panorama_fish_eye'
   },
   //Other menus ends here
   //Master Setting Menus starts
