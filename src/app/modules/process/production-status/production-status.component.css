@@ -1,0 +1,9 @@
+.info-label{
+    padding: 5px;
+}
+
+.info-label span:first-child{
+    color:#2196f3;
+    font-weight: 500
+
+}

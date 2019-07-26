@@ -151,7 +151,7 @@ export class CodeGroupComponent implements OnInit {
   currentPage: number = 1;
   pageSize: number = 10;
   total: number;
-  pageSizeOptions: any[] = [5, 10, 20];
+  pageSizeOptions: any[] = [5, 10, 20,50];
   // End 1
 
   ngOnInit() {

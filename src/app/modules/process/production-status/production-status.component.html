@@ -1,1 +1,90 @@
-<p>production-status works!</p>
+<!-- Process General info section starts here -->
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Production Status</mat-card-title>
+                <!-- ============================================================== -->
+                <!-- Form body starts here -->
+                <!-- ============================================================== -->
+                <form class="basic-form m-t-30">
+                    <div fxLayout="row wrap">
+
+                        <!-- select so no column -->
+                        <div class="p-r-20" fxFlex.gt-md="33.33" fxFlex="100">
+                            <mat-form-field>
+                                <mat-select placeholder="Select SO No">
+                                    <mat-option value="option">Option</mat-option>
+                                    <mat-option value="option">Option2</mat-option>
+                                    <mat-option value="option">Option3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <!-- select so no column ends here-->
+
+                        <!-- from date column -->
+                        <div fxFlex.gt-md="33.33" fxFlex="100">
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker]="fromDataPicker" placeholder="From">
+                                <mat-datepicker-toggle matSuffix [for]="fromDataPicker"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi="true" #fromDataPicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <!-- from date column ends here-->
+
+                        <!-- to date column -->
+                        <div class="p-l-20" fxFlex.gt-md="33.33" fxFlex="100">
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker]="toDatePicker" placeholder="To">
+                                <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi="true" #toDatePicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <!-- to date column ends here -->
+                    </div>
+
+                    <div fxLayout="row wrap" class="p-20">
+                        <!-- Info Section -->
+                        <div fxFlex.gt-md="50" fxFlex="100">
+                            <div class="info-label">
+                                <span>Current SO No:</span><span class="p-l-10">0123456</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Customer Name:</span><span class="p-l-10">JSW Steel Vijaynagar</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Next Process:</span><span class="p-l-10">MILL 2</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Process No:</span><span class="p-l-10">1454</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Process Order:</span><span class="p-l-10">1001123456</span>
+                            </div>
+                        </div>
+
+                        <div fxFlex.gt-md="50" fxFlex="100">
+                            <div class="info-label">
+                                <span>Current HR Coil No:</span><span class="p-l-10">KUND8k0381</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Grade:</span><span class="p-l-10">C75 S</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Thickness (mm):</span><span class="p-l-10">5.5</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Width (mm):</span><span class="p-l-10">126</span>
+                            </div>
+                            <div class="info-label">
+                                <span>Weight (MT):</span><span class="p-l-10">20</span>
+                            </div>
+                        </div>
+                        <!-- Info Section ends here -->
+
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
