@@ -1,9 +1,28 @@
-.info-label{
-    padding: 5px;
+.info-label {
+  padding: 5px;
 }
-
-.info-label span:first-child{
-    color:#2196f3;
-    font-weight: 500
-
+.info-label span:first-child {
+  color: #2196f3;
+  font-weight: 500;
+}
+.m-l-r-25 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.w-100 {
+  width: 100%;
+}
+.tab-div {
+  display: flex;
+  flex-direction: column;
+}
+.tab-div div {
+  flex: auto;
+  cursor: pointer;
+  min-height: 75px;
+  padding-top: 1px;
+}
+.card-content {
+  padding-left: 0px;
+  padding-right: 0px;
 }
