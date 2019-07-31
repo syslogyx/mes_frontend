@@ -125,7 +125,7 @@ export class CodeGroupComponent implements OnInit {
             "incrementor",
             "updated_by_name",
             "status",
-            "action",
+            "action"
           ]
         : [
             "sr_no",
@@ -134,7 +134,7 @@ export class CodeGroupComponent implements OnInit {
             "incrementor",
             "updated_by_name",
             "status",
-            "action",
+            "action"
           ];
     });
   }
@@ -145,7 +145,7 @@ export class CodeGroupComponent implements OnInit {
     "incrementor",
     "updated_by_name",
     "status",
-    "action",
+    "action"
   ];
   columnsToDisplay: string[] = this.displayedColumns.slice();
   currentPage: number = 1;

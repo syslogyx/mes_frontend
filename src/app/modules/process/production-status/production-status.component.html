@@ -103,7 +103,7 @@
                             <!-- column -->
                             <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
                                 <a>
-                                    <mat-card class="bg-info text-white text-center">
+                                    <mat-card class="bg-info text-white text-center m-l-0">
                                         <div class="p-5">
                                             <h5>Downtime Register</h5>
                                         </div>
@@ -143,7 +143,7 @@
                             <!-- column -->
                             <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
                                 <a>
-                                    <mat-card class="bg-megna text-white text-center">
+                                    <mat-card class="bg-megna text-white text-center m-r-0">
                                         <div class="p-5">
                                             <h5>Scrap Monitoring</h5>
                                         </div>
@@ -152,9 +152,102 @@
                             </div>
                             <!-- column -->
                         </div>
+
+                        <!-- Table section starts here -->
+                        <div class="responsive-table">
+                            <mat-table #table [dataSource]="dataSource">
+                                <!-- Sr No Column -->
+                                <ng-container matColumnDef="sr_no">
+                                    <mat-header-cell *matHeaderCellDef> Sr. No. </mat-header-cell>
+                                    <mat-cell *matCellDef="let element,let i = index;"> {{i + 1}}
+                                    </mat-cell>
+                                    <mat-cell *matCellDef="let element,let i = index;">
+                                        <span class="header-label">Sr. No.</span>
+                                        {{i + 1}}</mat-cell>
+                                </ng-container>
+
+                                <!-- Date Column -->
+                                <ng-container matColumnDef="date">
+                                    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Date</span>
+                                        {{element.date}}</mat-cell>
+                                </ng-container>
+
+                                <!-- HR Coil No Column -->
+                                <ng-container matColumnDef="hr_coil_no">
+                                    <mat-header-cell *matHeaderCellDef> HR Coil No </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">HR Coil No</span>
+                                        {{element.hr_coil_no}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Start Time Column -->
+                                <ng-container matColumnDef="start_time">
+                                    <mat-header-cell *matHeaderCellDef> Start Time </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Start Time</span>
+                                        {{element.start_time}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Finish Time Column -->
+                                <ng-container matColumnDef="finish_time">
+                                    <mat-header-cell *matHeaderCellDef> Finish Time </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Finish Time</span>
+                                        {{element.finish_time}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Delay Column -->
+                                <ng-container matColumnDef="delay">
+                                    <mat-header-cell *matHeaderCellDef> Delay </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">delay</span>
+                                        {{element.delay}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Delay Reason Column -->
+                                <ng-container matColumnDef="delay_reason">
+                                    <mat-header-cell *matHeaderCellDef> Delay Reason </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Delay Reason</span>
+                                        {{element.delay_reason}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Duration Column -->
+                                <ng-container matColumnDef="duration">
+                                    <mat-header-cell *matHeaderCellDef> Duration </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Duration</span>
+                                        {{element.duration}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Scrap Column -->
+                                <ng-container matColumnDef="scrap">
+                                    <mat-header-cell *matHeaderCellDef> Scrap (Kg/Ton) </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Scrap (Kg/Ton)</span>
+                                        {{element.scrap}} </mat-cell>
+                                </ng-container>
+
+                                <!-- Status Column -->
+                                <ng-container matColumnDef="status">
+                                    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="header-label">Status</span>
+                                        {{element.status}} </mat-cell>
+                                </ng-container>
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+                        </div>
+                        <!-- Table Section ends here -->
                     </mat-card-content>
                 </mat-tab>
             </mat-tab-group>
+
+
         </mat-card>
     </div>
 </div>

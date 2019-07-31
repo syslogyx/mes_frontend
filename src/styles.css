@@ -1,9 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-.btn-success{
-    color: green!important;
+.btn-success {
+  color: green !important;
 }
-.padding-l-r-10{
-    padding-left: 35px!important;
-    padding-right: 35px!important;
+.padding-l-r-10 {
+  padding-left: 35px !important;
+  padding-right: 35px !important;
 }
+
+/* Table Css starts here */
+table {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #00000000;
+}
+
+.mat-header-cell {
+  font-size: 14px !important;
+  color: #1e88e5 !important;
+}
+th.mat-header-cell,
+td.mat-cell {
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+th.mat-header-cell:not(:last-child),
+td.mat-cell:not(:last-child) {
+  border-right: 1px solid #e0e0e0;
+}
+/* Table Css Ends here */
+
+/* Button css */
+.mat-btn-sm {
+  min-height: 25px !important;
+  font-size: 11px !important;
+  line-height: 0px!important;
+}
+/* Button css ends here */

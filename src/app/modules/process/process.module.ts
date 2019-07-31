@@ -13,6 +13,7 @@ import { DemoMaterialModule } from "../../demo-material-module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FileUploadModule } from "ng2-file-upload";
     FileUploadModule,
     MatTreeModule,
     MatDatepickerModule,
+    TooltipModule
   ],
 })
 export class ProcessModule {}
