@@ -12,26 +12,28 @@
 .w-100 {
   width: 100%;
 }
-.tab-div {
-  display: flex;
-  flex-direction: column;
+
+/* Tab Css starts here */
+.tab-parent {
+  overflow-x: auto;
 }
-.tab-div div {
-  flex: auto;
+.btn-tab-container {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+.btn-tab {
+  display: table-cell;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  min-width: 120px;
   cursor: pointer;
-  min-height: 75px;
-  padding-top: 1px;
 }
-.card-content {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.m-l-0 {
-  margin-left: 0px;
-}
-.m-r-0 {
-  margin-right: 0px;
-}
+/* Tab css ends here */
+
 /* Table Border css */
 .mat-table {
   border: 1px solid rgba(0, 0, 0, 0.12);

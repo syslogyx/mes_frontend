@@ -99,59 +99,40 @@
             <mat-tab-group class="p-t-20 m-l-r-25">
                 <mat-tab label="Shift {{key}}" *ngFor='let key of [1,2,3]'>
                     <mat-card-content class="card-content">
-                        <div fxLayout="row wrap" fxLayoutAlign="center center" class="tab-div">
-                            <!-- column -->
-                            <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
-                                <a>
-                                    <mat-card class="bg-info text-white text-center m-l-0">
-                                        <div class="p-5">
-                                            <h5>Downtime Register</h5>
-                                        </div>
-                                    </mat-card>
-                                </a>
+                        <!-- Card Layout starts here -->
+                        <div fxLayout="row wrap" class="tab-parent">
+                            <div xFlex.gt-md="100" fxFlex="100" class="btn-tab-container m-b-40">
+                                <div class="btn-tab bg-info text-white text-center" [ngClass]="shadow1"
+                                    (mouseover)="shadow1='mat-elevation-z20'" (mouseout)="shadow1=''">
+                                    <h5>Downtime Register</h5>
+                                </div>
+
+                                <div class="btn-tab bg-purple text-white text-center" [ngClass]="shadow2"
+                                    (mouseover)="shadow2='mat-elevation-z20'" (mouseout)="shadow2=''">
+                                    <h5>Process Parameters</h5>
+                                </div>
+
+                                <div class="btn-tab bg-success text-white text-center" [ngClass]="shadow3"
+                                    (mouseover)="shadow3='mat-elevation-z20'" (mouseout)="shadow3=''">
+                                    <h5>Consumable</h5>
+                                </div>
+
+                                <div class="btn-tab bg-inverse text-white text-center" [ngClass]="shadow4"
+                                    (mouseover)="shadow4='mat-elevation-z20'" (mouseout)="shadow4=''">
+                                    <h5>Process Equipment Status</h5>
+                                </div>
+
+                                <div class="btn-tab bg-megna text-white text-center" [ngClass]="shadow5"
+                                    (mouseover)="shadow5='mat-elevation-z20'" (mouseout)="shadow5=''">
+                                    <h5>Scrap Monitoring</h5>
+                                </div>
+                                <div class="btn-tab bg-info text-white text-center" [ngClass]="shadow6"
+                                    (mouseover)="shadow6='mat-elevation-z20'" (mouseout)="shadow6=''">
+                                    <h5>ECS</h5>
+                                </div>
                             </div>
-                            <!-- column -->
-                            <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
-                                <a>
-                                    <mat-card class="bg-purple text-white text-center">
-                                        <div class="p-5">
-                                            <h5>Process Parameters</h5>
-                                        </div>
-                                    </mat-card>
-                                </a>
-                            </div>
-                            <!-- column -->
-                            <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
-                                <a>
-                                    <mat-card class="bg-success text-white text-center">
-                                        <div class="p-5">
-                                            <h5>Consumable</h5>
-                                        </div>
-                                    </mat-card>
-                                </a>
-                            </div>
-                            <!-- column -->
-                            <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
-                                <a>
-                                    <mat-card class="bg-inverse text-white text-center">
-                                        <div class="p-5">
-                                            <h5>Process Equipment Status</h5>
-                                        </div>
-                                    </mat-card>
-                                </a>
-                            </div>
-                            <!-- column -->
-                            <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
-                                <a>
-                                    <mat-card class="bg-megna text-white text-center m-r-0">
-                                        <div class="p-5">
-                                            <h5>Scrap Monitoring</h5>
-                                        </div>
-                                    </mat-card>
-                                </a>
-                            </div>
-                            <!-- column -->
                         </div>
+                        <!-- Card Layout ends here -->
 
                         <!-- Table section starts here -->
                         <div class="responsive-table">
