@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { BreakpointObserver } from "@angular/cdk/layout";
+import { UtilityService } from "../../../common/utility.service";
 export interface PeriodicElement {
   date: string;
   hr_coil_no: string;
@@ -138,10 +139,12 @@ export class CoilsToProcessComponent implements OnInit {
     "time",
     "status",
   ];
+  tooltipOption: any;
 
-  constructor() {}
+  constructor(private utility : UtilityService) {}
 
   ngOnInit() {
+    this.tooltipOption = this.utility.settings().tooltip;
     this.dataSourceCoils2Process = ELEMENT_DATA_COILS_PROCESS;
     this.dataSourceCampaigns = ELEMENT_DATA_CAMPAIGN;
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { UtilityService } from "../../../common/utility.service";
 export interface PeriodicElement {
   date: string;
   hr_coil_no: string;
@@ -6,13 +7,14 @@ export interface PeriodicElement {
   input_width: string;
   input_weight: string;
   input_grade: string;
-  required_width: string;
-  customer_name: string;
+  cpl_coil_no: number;
+  output_thickness: string;
+  output_cpl_width: string;
+  output_set_width: string;
+  output_measured_width: string;
+  output_weight: string;
+  remark: string;
   process_order: string;
-  sales_order: string;
-  next_route: string;
-  location: string;
-  priority: string;
   action: string;
 }
 
@@ -25,13 +27,14 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
     input_width: "1200",
     input_weight: "20",
     input_grade: "C75 S",
-    required_width: "--",
-    customer_name: "JSW Steel, Vijaynagar",
-    process_order: "10012345678",
-    sales_order: "SO123456",
-    next_route: "MILL2",
-    location: "Yard 01",
-    priority: "High",
+    cpl_coil_no: null,
+    output_thickness: "",
+    output_cpl_width: "",
+    output_set_width: "",
+    output_measured_width: "",
+    output_weight: "",
+    remark: "",
+    process_order: "",
     action: "",
   },
   {
@@ -41,13 +44,14 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
     input_width: "1200",
     input_weight: "20",
     input_grade: "C75 S",
-    required_width: "--",
-    customer_name: "JSW Steel, Vijaynagar",
-    process_order: "10012345678",
-    sales_order: "SO123456",
-    next_route: "MILL2",
-    location: "Yard 01",
-    priority: "High",
+    cpl_coil_no: null,
+    output_thickness: "",
+    output_cpl_width: "",
+    output_set_width: "",
+    output_measured_width: "",
+    output_weight: "",
+    remark: "",
+    process_order: "",
     action: "",
   },
   {
@@ -57,15 +61,16 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
     input_width: "1200",
     input_weight: "20",
     input_grade: "C75 S",
-    required_width: "--",
-    customer_name: "JSW Steel, Vijaynagar",
-    process_order: "10012345678",
-    sales_order: "SO123456",
-    next_route: "MILL2",
-    location: "Yard 01",
-    priority: "High",
+    cpl_coil_no: null,
+    output_thickness: "",
+    output_cpl_width: "",
+    output_set_width: "",
+    output_measured_width: "",
+    output_weight: "",
+    remark: "",
+    process_order: "",
     action: "",
-  },
+  }
 ];
 
 @Component({
@@ -74,19 +79,17 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
   styleUrls: ["./shift-production-log-book.component.css"],
 })
 export class ShiftProductionLogBookComponent implements OnInit {
+  tooltipOption:object;
   dataSourceCoils2Process: any[];
   displayedTopColumnsCoils2Process: string[] = [
     "sr_no_rs",
     "date_rs",
     "hr_coil_no_rs",
     "input_details",
-    "required_width_rs",
-    "customer_name_rs",
+    "cpl_coil_no_rs",
+    "output_details",
+    "remark_rs",
     "process_order_rs",
-    "sales_order_rs",
-    "next_route_rs",
-    "location_rs",
-    "priority_rs",
     "action_rs",
   ];
   displayedBottomColumnsCoils2Process: string[] = [
@@ -97,18 +100,20 @@ export class ShiftProductionLogBookComponent implements OnInit {
     "input_width",
     "input_weight",
     "input_grade",
-    "required_width",
-    "customer_name",
+    "cpl_coil_no",
+    "output_thickness",
+    "output_cpl_width",
+    "output_set_width",
+    "output_measured_width",
+    "output_weight",
+    "remark",
     "process_order",
-    "sales_order",
-    "next_route",
-    "location",
-    "priority",
     "action",
   ];
-  constructor() {}
+  constructor(private utility:UtilityService) {}
 
   ngOnInit() {
     this.dataSourceCoils2Process = ELEMENT_DATA_COILS_PROCESS;
+    this.tooltipOption = this.utility.settings().tooltip;
   }
 }

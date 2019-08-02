@@ -35,6 +35,19 @@ td.mat-cell:not(:last-child) {
 .mat-btn-sm {
   min-height: 25px !important;
   font-size: 11px !important;
-  line-height: 0px!important;
+  line-height: 0px !important;
 }
 /* Button css ends here */
+
+/* Tooltip css */
+.tooltip {
+  background-color: #1e88e5de !important;
+  max-width: 350px!important;
+}
+.tooltip::after {
+  border-color: #1e88e5de transparent transparent !important;
+}
+/* Tooltip css ends here */
+.pull-left{
+  float: left!important;
+}

@@ -57,4 +57,16 @@ export class UtilityService {
     });
     return httpParams;
   }
+
+  /**
+   * Set Tooltip configurations here
+   */
+  settings() {    
+  return {
+    tooltip: {
+      "tooltip-class": 'tool-tip-info',
+      "content-type": "template",
+    },
+  };
+  }
 }
