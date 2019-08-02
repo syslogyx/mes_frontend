@@ -5,7 +5,7 @@
             <mat-card-content>
                 <mat-card-title>Coils To Process
                     <button type="button" class="pull-right m-l-10" mat-mini-fab color="basic"
-                        matTooltipPosition="above" matTooltip="Filter">
+                        matTooltipPosition="above" matTooltip="Filter" (click)="panelOpenState = !panelOpenState">
                         <mat-icon>filter_list</mat-icon>
                     </button>
                     <button type="button" class="pull-right m-l-10" mat-mini-fab color="primary"
@@ -24,7 +24,7 @@
                 <!-- ============================================================== -->
                 <!-- Filter starts here -->
                 <!-- ============================================================== -->
-                <form class="basic-form m-t-30">
+                <form class="basic-form m-t-30" *ngIf="panelOpenState">
                     <div fxLayout="row wrap">
 
                         <!-- select Customer column -->
@@ -120,7 +120,7 @@
                         <!-- search column ends here-->
                     </div>
                 </form>
-
+                <br>
                 <!-- Table Section starts here -->
                 <div class="responsive-table">
                     <table id="coil-to-process-table" mat-table [dataSource]="dataSourceCoils2Process" class="m-t-30">
