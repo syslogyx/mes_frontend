@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Downtime Register</h1>
+<div mat-dialog-content>
+  <!-- Table Section starts here -->
+  <div class="table-responsive smart-table">
+    <ng2-smart-table [source]="source" [settings]="settings" (editConfirm)="onSaveConfirm($event)"
+      (createConfirm)="onCreateConfirm($event)" class="mat-table no-wrap"></ng2-smart-table>
+  </div>
+  <!-- Table Section ends here -->
+</div>
+<div mat-dialog-actions class="pull-right m-t-5">
+  <button mat-raised-button color="basic" (click)="close()">Close</button>
+</div>

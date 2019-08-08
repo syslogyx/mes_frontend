@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UtilityService } from "../../../common/utility.service";
+import { MatDialog } from "@angular/material/dialog";
+import { DowntimeRegisterComponent } from "../../dialogs/downtime-register/downtime-register.component";
 export interface PeriodicElement {
   date: string;
   hr_coil_no: string;
@@ -70,7 +72,7 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
     remark: "",
     process_order: "",
     action: "",
-  }
+  },
 ];
 
 @Component({
@@ -79,7 +81,7 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
   styleUrls: ["./shift-production-log-book.component.css"],
 })
 export class ShiftProductionLogBookComponent implements OnInit {
-  tooltipOption:object;
+  tooltipOption: object;
   dataSourceCoils2Process: any[];
   displayedTopColumnsCoils2Process: string[] = [
     "sr_no_rs",
@@ -110,10 +112,21 @@ export class ShiftProductionLogBookComponent implements OnInit {
     "process_order",
     "action",
   ];
-  constructor(private utility:UtilityService) {}
+  constructor(private utility: UtilityService, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.dataSourceCoils2Process = ELEMENT_DATA_COILS_PROCESS;
     this.tooltipOption = this.utility.settings().tooltip;
+  }
+
+  openDwnTmRegDialog(): void {
+    const dialogRef = this.dialog.open(DowntimeRegisterComponent, {
+      // width: "1130px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
   }
 }

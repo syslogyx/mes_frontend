@@ -109,11 +109,13 @@
                     </div>
                 </form>
 
+
                 <!-- Card Layout starts here -->
                 <div fxLayout="row wrap" class="tab-parent">
                     <div xFlex.gt-md="100" fxFlex="100" class="btn-tab-container m-t-40 m-b-40">
                         <div class="btn-tab bg-info text-white text-center" [ngClass]="shadow1"
-                            (mouseover)="shadow1='mat-elevation-z20'" (mouseout)="shadow1=''">
+                            (mouseover)="shadow1='mat-elevation-z20'" (mouseout)="shadow1=''"
+                            (click)="openDwnTmRegDialog()">
                             <h5>Downtime Register</h5>
                         </div>
 

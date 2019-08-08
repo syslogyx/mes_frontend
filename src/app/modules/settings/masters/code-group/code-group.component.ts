@@ -195,7 +195,6 @@ export class CodeGroupComponent implements OnInit {
           this.masterList = dt.response.list;
           this.dataSource = this.masterList;
           this.total = dt.response.pagination.count;
-          console.log(this.dataSource);
         }
       },
       error => {

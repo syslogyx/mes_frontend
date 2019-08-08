@@ -14,6 +14,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
 import { TooltipModule } from 'ng2-tooltip-directive';
+import { DowntimeRegisterComponent } from "../dialogs/downtime-register/downtime-register.component";
+import { Ng2SmartTableModule } from "ng2-smart-table";
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     ShiftProductionLogBookComponent,
     CoilsToProcessComponent,
     ProductionStatusComponent,
+    DowntimeRegisterComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,9 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     FileUploadModule,
     MatTreeModule,
     MatDatepickerModule,
-    TooltipModule
+    TooltipModule,
+    Ng2SmartTableModule
   ],
+  entryComponents : [DowntimeRegisterComponent]
 })
 export class ProcessModule {}

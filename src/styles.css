@@ -65,3 +65,23 @@ table input{
   padding: 0px!important;
   font-size: 14px!important;
 }
+
+/* Smart Table css */
+.smart-table table tr{
+  border-bottom: 1px solid #e0e0e0;
+}
+.smart-table table th, .smart-table table td{
+  border-right: 1px solid #e0e0e0;
+}
+/* Smart Table css ends here */
+
+/* Dialog width */
+.cdk-overlay-pane{
+  max-width : 90vw!important;
+}
+/* Dialog width ends here */
+
+.ng2-smart-filters{
+  /* position: absolute;
+  top: 65px; */
+}
