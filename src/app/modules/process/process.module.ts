@@ -7,15 +7,24 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ShiftProductionLogBookComponent } from "./shift-production-log-book/shift-production-log-book.component";
 import { CoilsToProcessComponent } from "./coils-to-process/coils-to-process.component";
 import { ProductionStatusComponent } from "./production-status/production-status.component";
-import { MatInputModule, MatTreeModule, MatDatepickerModule } from "@angular/material";
+import {
+  MatInputModule,
+  MatTreeModule,
+  MatDatepickerModule,
+} from "@angular/material";
 import { NgxDatatableModule } from "@swimlane/ngx-datatable";
 import { DemoMaterialModule } from "../../demo-material-module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
-import { TooltipModule } from 'ng2-tooltip-directive';
+import { TooltipModule } from "ng2-tooltip-directive";
 import { DowntimeRegisterComponent } from "../dialogs/downtime-register/downtime-register.component";
 import { Ng2SmartTableModule } from "ng2-smart-table";
+import { ConsumableComponent } from "../dialogs/consumable/consumable.component";
+import { ProcessParametersComponent } from "../dialogs/process-parameters/process-parameters.component";
+import { ProcessEquipmentComponent } from "../dialogs/process-equipment/process-equipment.component";
+import { ScrapMonitoringComponent } from "../dialogs/scrap-monitoring/scrap-monitoring.component";
+import { EcsComponent } from "../dialogs/ecs/ecs.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +32,12 @@ import { Ng2SmartTableModule } from "ng2-smart-table";
     ShiftProductionLogBookComponent,
     CoilsToProcessComponent,
     ProductionStatusComponent,
-    DowntimeRegisterComponent
+    DowntimeRegisterComponent,
+    ConsumableComponent,
+    ProcessParametersComponent,
+    ProcessEquipmentComponent,
+    ScrapMonitoringComponent,
+    EcsComponent,
   ],
   imports: [
     CommonModule,
@@ -38,8 +52,15 @@ import { Ng2SmartTableModule } from "ng2-smart-table";
     MatTreeModule,
     MatDatepickerModule,
     TooltipModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
   ],
-  entryComponents : [DowntimeRegisterComponent]
+  entryComponents: [
+    DowntimeRegisterComponent,
+    ConsumableComponent,
+    ProcessParametersComponent,
+    ProcessEquipmentComponent,
+    ScrapMonitoringComponent,
+    EcsComponent
+  ],
 })
 export class ProcessModule {}

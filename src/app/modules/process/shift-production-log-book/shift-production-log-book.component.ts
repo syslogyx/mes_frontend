@@ -2,6 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { UtilityService } from "../../../common/utility.service";
 import { MatDialog } from "@angular/material/dialog";
 import { DowntimeRegisterComponent } from "../../dialogs/downtime-register/downtime-register.component";
+import { ConsumableComponent } from "../../dialogs/consumable/consumable.component";
+import { ProcessParametersComponent } from "../../dialogs/process-parameters/process-parameters.component";
+import { ProcessEquipmentComponent } from "../../dialogs/process-equipment/process-equipment.component";
+import { ScrapMonitoringComponent } from "../../dialogs/scrap-monitoring/scrap-monitoring.component";
+import { EcsComponent } from "../../dialogs/ecs/ecs.component";
 export interface PeriodicElement {
   date: string;
   hr_coil_no: string;
@@ -122,6 +127,61 @@ export class ShiftProductionLogBookComponent implements OnInit {
   openDwnTmRegDialog(): void {
     const dialogRef = this.dialog.open(DowntimeRegisterComponent, {
       // width: "1130px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
+
+  openProcessParamDialog(): void {
+    const dialogRef = this.dialog.open(ProcessParametersComponent, {
+      width: "1100px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
+
+  openConsumableDialog(): void {
+    const dialogRef = this.dialog.open(ConsumableComponent, {
+      width: "890px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
+
+  openProcessEquipDialog(): void {
+    const dialogRef = this.dialog.open(ProcessEquipmentComponent, {
+      width: "800px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
+
+  openScrapMonitorDialog(): void {
+    const dialogRef = this.dialog.open(ScrapMonitoringComponent, {
+      width: "890px",
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
+
+  openEcsDialog(): void {
+    const dialogRef = this.dialog.open(EcsComponent, {
+      width: "700px",
       data: {},
     });
 

@@ -3,6 +3,14 @@
 .btn-success {
   color: green !important;
 }
+.div-label {
+  color: #1e88e5 !important;
+  font-weight: 400;
+}
+.div-blk-label {
+  color: #2f3d4a !important;
+  font-weight: 400;
+}
 .padding-l-r-10 {
   padding-left: 35px !important;
   padding-right: 35px !important;
@@ -59,29 +67,46 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-table input{
-  border: 0px!important;
+table input {
+  border: 0px !important;
   text-align: center;
-  padding: 0px!important;
-  font-size: 14px!important;
+  padding: 0px !important;
+  font-size: 14px !important;
 }
 
 /* Smart Table css */
-.smart-table table tr{
+.smart-table table tr {
   border-bottom: 1px solid #e0e0e0;
 }
-.smart-table table th, .smart-table table td{
+.smart-table table th,
+.smart-table table td {
   border-right: 1px solid #e0e0e0;
 }
 /* Smart Table css ends here */
 
 /* Dialog width */
-.cdk-overlay-pane{
-  max-width : 90vw!important;
+.cdk-overlay-pane {
+  max-width: 90vw !important;
 }
 /* Dialog width ends here */
 
-.ng2-smart-filters{
-  /* position: absolute;
-  top: 65px; */
+.set-o-bdr {
+  border: 1px solid #e0e0e0;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+.set-o-bdr > div {
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.table-input {
+  width: 100%;
+  font-size: 14px;
+  border: 0px;
+  line-height: 40px;
+}
+
+.no-bdr-btm {
+  border-bottom: 0px!important;
 }
