@@ -1,0 +1,14 @@
+.info-label {
+  padding: 5px;
+}
+.info-label span:first-child {
+  color: #2196f3;
+  font-weight: 500;
+}
+.m-l-r-25 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.w-100 {
+  width: 100%;
+}
