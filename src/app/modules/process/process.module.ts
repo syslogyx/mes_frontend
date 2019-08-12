@@ -25,6 +25,7 @@ import { ProcessParametersComponent } from "../dialogs/process-parameters/proces
 import { ProcessEquipmentComponent } from "../dialogs/process-equipment/process-equipment.component";
 import { ScrapMonitoringComponent } from "../dialogs/scrap-monitoring/scrap-monitoring.component";
 import { EcsComponent } from "../dialogs/ecs/ecs.component";
+import { ProcessedCoilsComponent } from './processed-coils/processed-coils.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EcsComponent } from "../dialogs/ecs/ecs.component";
     ProcessEquipmentComponent,
     ScrapMonitoringComponent,
     EcsComponent,
+    ProcessedCoilsComponent,
   ],
   imports: [
     CommonModule,

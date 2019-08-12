@@ -246,28 +246,34 @@ const MENUITEMS = [
   //Theme menu ends
   // Other Menus Starts here
   {
-    state: 'dashboard',
-    name: 'Dashboard',
-    type: 'link',
-    icon: 'av_timer'
+    state: "dashboard",
+    name: "Dashboard",
+    type: "link",
+    icon: "av_timer",
   },
   {
-    state: 'production_status',
-    name: 'Production Status',
-    type: 'link',
-    icon: 'show_chart'
+    state: "production_status",
+    name: "Production Status",
+    type: "link",
+    icon: "show_chart",
   },
   {
-    state: 'coils_to_process',
-    name: 'Coils To Process',
-    type: 'link',
-    icon: 'panorama_fish_eye'
+    state: "coils_to_process",
+    name: "Coils To Process",
+    type: "link",
+    icon: "panorama_fish_eye",
   },
   {
-    state: 'shift_production_log_book',
-    name: 'Shift Prod. Log Book',
-    type: 'link',
-    icon: 'book'
+    state: "shift_production_log_book",
+    name: "Shift Prod. Log Book",
+    type: "link",
+    icon: "book",
+  },
+  {
+    state: "processed_coils",
+    name: "Processed Coils",
+    type: "link",
+    icon: "panorama_wide_angle",
   },
   //Other menus ends here
   //Master Setting Menus starts
@@ -276,7 +282,7 @@ const MENUITEMS = [
     name: "Settings",
     type: "saperator",
     icon: "av_timer",
-  }
+  },
   // Master Settings Menus ends
 ];
 
