@@ -1,4 +1,8 @@
-<h1 mat-dialog-title>Process Equipment Status</h1>
+<h1 mat-dialog-title>Process Equipment Status
+  <button mat-icon-button color="basic" class="pull-right" (click)="close()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</h1>
 <div mat-dialog-content>
   <!-- Table 1 starts here -->
   <div fxLayout="row wrap" class="set-o-bdr">
@@ -21,10 +25,10 @@
         <div class="div-blk-label p-10">APT {{i+1}}</div>
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
     </ng-template>
     <!-- APT  row ends -->
@@ -35,10 +39,10 @@
         <div class="div-blk-label p-10">CSRU {{i+1}}</div>
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
     </ng-template>
     <!-- CSRU  row ends -->
@@ -48,10 +52,10 @@
       <div class="div-blk-label p-10">Scrubber Pump</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Scrubber Pump ends -->
 
@@ -60,10 +64,10 @@
       <div class="div-blk-label p-10">Equipments</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Equipments ends -->
 
@@ -72,10 +76,10 @@
       <div class="div-blk-label p-10">Hot Air Dryer</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Hot Air Dryer ends -->
 
@@ -84,10 +88,10 @@
       <div class="div-blk-label p-10">Scrubber Blower</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Scrubber Blower ends -->
 
@@ -96,10 +100,10 @@
       <div class="div-blk-label p-10">Side Trimmer</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Side trimmer ends -->
 
@@ -126,10 +130,10 @@
         <div class="div-blk-label p-10">CSB - {{i+1}}</div>
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
       <div fxFlex.gt-md="30" fxFlex="100">
-        <input type="number" class="table-input text-center" placeholder="Enter">
+        <input type="text" class="table-input text-center" placeholder="Enter">
       </div>
     </ng-template>
     <!-- CSB  row ends -->
@@ -139,10 +143,10 @@
       <div class="div-blk-label p-10">5 MT Old</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- 5 MT old ends -->
 
@@ -151,10 +155,10 @@
       <div class="div-blk-label p-10">5 MT New</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- 5 MT New ends -->
 
@@ -163,10 +167,10 @@
       <div class="div-blk-label p-10">CPL Exit 25 MT</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- CPL Exit ends -->
 
@@ -175,10 +179,10 @@
       <div class="div-blk-label p-10">Interlock Status</div>
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <div fxFlex.gt-md="30" fxFlex="100">
-      <input type="number" class="table-input text-center" placeholder="Enter">
+      <input type="text" class="table-input text-center" placeholder="Enter">
     </div>
     <!-- Interlock Status ends -->
   </div>

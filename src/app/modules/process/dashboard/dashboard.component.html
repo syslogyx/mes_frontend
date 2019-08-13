@@ -45,13 +45,28 @@
                 <!-- Info body starts here -->
                 <!-- ============================================================== -->
                 <div class="basic-form">
-                    <div fxLayout="row wrap" class="p-20">
+                    <div fxLayout="row wrap" class="m-t-40">
                         <!-- Info Section -->
-                        <div fxFlex.gt-md="50" fxFlex="100">
-
+                        <div fxFlex.gt-md="40" fxFlex="100" class="set-bdr-rt">
+                            <div class="piechart text-center">
+                                <x-chartist class="" [data]="donuteChart1.data" [type]="donuteChart1.type"
+                                    [options]="donuteChart1.options"
+                                    [responsiveOptions]="donuteChart1.responsiveOptions" [events]="donuteChart1.events">
+                                </x-chartist>
+                            </div>
+                            <ul class="list-inline text-center">
+                                <li>
+                                    <h6 class="text-muted text-success m-0">
+                                        <i class="fa fa-circle font-10 m-r-10 "></i>Planned</h6>
+                                </li>
+                                <li>
+                                    <h6 class="text-muted  text-info  m-0">
+                                        <i class="fa fa-circle font-10 m-r-10"></i>Achieved</h6>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div fxFlex.gt-md="50" fxFlex="100">
+                        <div fxFlex.gt-md="60" fxFlex="100" class="p-20">
                             <div class="info-label">
                                 <span>No. of Coils Planned :</span><span class="p-l-10">150</span>
                             </div>

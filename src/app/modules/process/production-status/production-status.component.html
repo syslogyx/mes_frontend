@@ -11,7 +11,7 @@
                     <div fxLayout="row wrap">
 
                         <!-- select so no column -->
-                        <div class="p-r-20" fxFlex.gt-md="33.33" fxFlex="100">
+                        <div class="p-r-20" fxFlex.gt-md="30" fxFlex="100">
                             <mat-form-field>
                                 <mat-select placeholder="Select SO No">
                                     <mat-option value="option">Option</mat-option>
@@ -23,9 +23,10 @@
                         <!-- select so no column ends here-->
 
                         <!-- from date column -->
-                        <div fxFlex.gt-md="33.33" fxFlex="100">
+                        <div fxFlex.gt-md="30" fxFlex="100">
                             <mat-form-field class="example-full-width">
-                                <input matInput [matDatepicker]="fromDataPicker" placeholder="From">
+                                <input matInput [matDatepicker]="fromDataPicker" placeholder="From" readonly
+                                    (click)="fromDataPicker.open()">
                                 <mat-datepicker-toggle matSuffix [for]="fromDataPicker"></mat-datepicker-toggle>
                                 <mat-datepicker touchUi="true" #fromDataPicker></mat-datepicker>
                             </mat-form-field>
@@ -33,14 +34,21 @@
                         <!-- from date column ends here-->
 
                         <!-- to date column -->
-                        <div class="p-l-20" fxFlex.gt-md="33.33" fxFlex="100">
+                        <div class="p-l-20 p-r-20" fxFlex.gt-md="30" fxFlex="100">
                             <mat-form-field class="example-full-width">
-                                <input matInput [matDatepicker]="toDatePicker" placeholder="To">
+                                <input matInput [matDatepicker]="toDatePicker" placeholder="To" readonly
+                                    (click)="toDatePicker.open()">
                                 <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
                                 <mat-datepicker touchUi="true" #toDatePicker></mat-datepicker>
                             </mat-form-field>
                         </div>
                         <!-- to date column ends here -->
+
+                        <!-- search column -->
+                        <div fxFlex.gt-md="10" fxFlex="100">
+                            <button class="m-t-10" mat-raised-button color="primary">SEARCH</button>
+                        </div>
+                        <!-- search column ends here-->
                     </div>
 
                     <div fxLayout="row wrap" class="p-20">
@@ -101,33 +109,39 @@
                     <mat-card-content class="card-content">
                         <!-- Card Layout starts here -->
                         <div fxLayout="row wrap" class="tab-parent">
-                            <div xFlex.gt-md="100" fxFlex="100" class="btn-tab-container m-b-40">
+                            <div xFlex.gt-md="100" fxFlex="100" class="btn-tab-container m-t-40 m-b-40">
                                 <div class="btn-tab bg-info text-white text-center" [ngClass]="shadow1"
-                                    (mouseover)="shadow1='mat-elevation-z20'" (mouseout)="shadow1=''">
+                                    (mouseover)="shadow1='mat-elevation-z20'" (mouseout)="shadow1=''"
+                                    (click)="openDwnTmRegDialog()">
                                     <h5>Downtime Register</h5>
                                 </div>
 
                                 <div class="btn-tab bg-purple text-white text-center" [ngClass]="shadow2"
-                                    (mouseover)="shadow2='mat-elevation-z20'" (mouseout)="shadow2=''">
+                                    (mouseover)="shadow2='mat-elevation-z20'" (mouseout)="shadow2=''"
+                                    (click)="openProcessParamDialog()">
                                     <h5>Process Parameters</h5>
                                 </div>
 
                                 <div class="btn-tab bg-success text-white text-center" [ngClass]="shadow3"
-                                    (mouseover)="shadow3='mat-elevation-z20'" (mouseout)="shadow3=''">
+                                    (mouseover)="shadow3='mat-elevation-z20'" (mouseout)="shadow3=''"
+                                    (click)="openConsumableDialog()">
                                     <h5>Consumable</h5>
                                 </div>
 
                                 <div class="btn-tab bg-inverse text-white text-center" [ngClass]="shadow4"
-                                    (mouseover)="shadow4='mat-elevation-z20'" (mouseout)="shadow4=''">
+                                    (mouseover)="shadow4='mat-elevation-z20'" (mouseout)="shadow4=''"
+                                    (click)="openProcessEquipDialog()">
                                     <h5>Process Equipment Status</h5>
                                 </div>
 
                                 <div class="btn-tab bg-megna text-white text-center" [ngClass]="shadow5"
-                                    (mouseover)="shadow5='mat-elevation-z20'" (mouseout)="shadow5=''">
+                                    (mouseover)="shadow5='mat-elevation-z20'" (mouseout)="shadow5=''"
+                                    (click)="openScrapMonitorDialog()">
                                     <h5>Scrap Monitoring</h5>
                                 </div>
                                 <div class="btn-tab bg-info text-white text-center" [ngClass]="shadow6"
-                                    (mouseover)="shadow6='mat-elevation-z20'" (mouseout)="shadow6=''">
+                                    (mouseover)="shadow6='mat-elevation-z20'" (mouseout)="shadow6=''"
+                                    (click)="openEcsDialog()">
                                     <h5>ECS</h5>
                                 </div>
                             </div>
@@ -227,8 +241,6 @@
                     </mat-card-content>
                 </mat-tab>
             </mat-tab-group>
-
-
         </mat-card>
     </div>
 </div>

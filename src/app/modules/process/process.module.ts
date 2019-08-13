@@ -26,6 +26,7 @@ import { ProcessEquipmentComponent } from "../dialogs/process-equipment/process-
 import { ScrapMonitoringComponent } from "../dialogs/scrap-monitoring/scrap-monitoring.component";
 import { EcsComponent } from "../dialogs/ecs/ecs.component";
 import { ProcessedCoilsComponent } from './processed-coils/processed-coils.component';
+import { ChartistModule } from "ng-chartist";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ProcessedCoilsComponent } from './processed-coils/processed-coils.compo
     MatDatepickerModule,
     TooltipModule,
     Ng2SmartTableModule,
+    ChartistModule
   ],
   entryComponents: [
     DowntimeRegisterComponent,

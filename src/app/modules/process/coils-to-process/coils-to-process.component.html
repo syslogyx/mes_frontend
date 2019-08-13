@@ -93,7 +93,8 @@
                         <!-- from date no column -->
                         <div class="p-l-20" fxFlex.gt-md="33.33" fxFlex="100">
                             <mat-form-field class="example-full-width">
-                                <input matInput [matDatepicker]="fromDataPicker" placeholder="From">
+                                <input matInput [matDatepicker]="fromDataPicker" placeholder="From" readonly
+                                    (click)="fromDataPicker.open()">
                                 <mat-datepicker-toggle matSuffix [for]="fromDataPicker"></mat-datepicker-toggle>
                                 <mat-datepicker touchUi="true" #fromDataPicker></mat-datepicker>
                             </mat-form-field>
@@ -106,7 +107,8 @@
                         <!-- to date column -->
                         <div class="p-r-20" fxFlex.gt-md="33.33" fxFlex="100">
                             <mat-form-field class="example-full-width">
-                                <input matInput [matDatepicker]="toDatePicker" placeholder="To">
+                                <input matInput [matDatepicker]="toDatePicker" placeholder="To" readonly
+                                    (click)="toDatePicker.open()">
                                 <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
                                 <mat-datepicker touchUi="true" #toDatePicker></mat-datepicker>
                             </mat-form-field>
