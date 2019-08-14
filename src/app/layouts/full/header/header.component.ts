@@ -10,32 +10,53 @@ export class AppHeaderComponent {
   // This is for Notifications
   notifications: Object[] = [
     {
+      round: 'notifications',
+      icon: 'ti-bell',
+      title: 'New HR Coil Planned',
+      subject: 'KUND038K',
+      time: '30/07/2019 9:30 AM'
+    },
+    {
+      round: 'notifications',
+      icon: 'ti-bell',
+      title: 'Its time to change shear',
+      subject: 'KUND038K',
+      time: '30/07/2019 9:30 AM'
+    },
+    {
+      round: 'notifications',
+      icon: 'ti-bell',
+      title: 'Campaign Changed',
+      subject: 'KUND038K',
+      time: '30/07/2019 9:30 AM'
+    },
+    {
       round: 'round-danger',
       icon: 'ti-link',
       title: 'Launch Admin',
       subject: 'Just see the my new admin!',
-      time: '9:30 AM'
+      time: '30/07/2019 9:30 AM'
     },
     {
       round: 'round-success',
       icon: 'ti-calendar',
       title: 'Event today',
       subject: 'Just a reminder that you have event',
-      time: '9:10 AM'
+      time: '30/07/2019 9:10 AM'
     },
     {
       round: 'round-info',
       icon: 'ti-settings',
       title: 'Settings',
       subject: 'You can customize this template as you want',
-      time: '9:08 AM'
+      time: '30/07/2019 9:08 AM'
     },
     {
       round: 'round-primary',
       icon: 'ti-user',
       title: 'Pavan kumar',
       subject: 'Just see the my admin!',
-      time: '9:00 AM'
+      time: '30/07/2019 9:00 AM'
     }
   ];
 

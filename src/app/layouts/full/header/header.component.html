@@ -12,20 +12,35 @@
     <div class="mailbox">
         <ul>
             <li>
-                <div class="drop-title">Notifications</div>
+                <div class="drop-title">Notifications
+                    <a href="#" class="pull-right" style="color: #000000de;text-decoration: underline;">View All</a>
+                </div>
             </li>
             <li>
                 <div class="message-center">
                     <perfect-scrollbar [config]="config">
                         <!-- Message -->
                         <a href="#" *ngFor="let notification of notifications">
-                            <div class="round {{notification.round}}">
-                                <i class="{{notification.icon}}"></i>
+                            <div class="p-r-10">
+                                <!-- <i class="{{notification.icon}}"></i> -->
+                                <mat-icon style="color: #1e88e5">notifications_active</mat-icon>
                             </div>
-                            <div class="mail-content">
-                                <h5>{{notification.title}}</h5>
-                                <span class="mail-desc">{{notification.subject}}</span>
-                                <span class="time">{{notification.time}}</span>
+                            <div class="mail-content" style="width: 100%">
+                                <h5 style="font-weight: 600">{{notification.title}}</h5>
+                                <span style="font-weight: 600" class="mail-desc">{{notification.subject}}</span>
+                                <!-- <span class="time pull-right">
+                                    <mat-icon style="font-size: 14px;width: 20px">
+                                        access_time
+                                    </mat-icon>{{notification.time}}
+                                </span> -->
+                                <ul style="display: inline-flex;float:right">
+                                    <li>
+                                        <mat-icon style="font-size: 16px;width: 20px">
+                                            access_time
+                                        </mat-icon>
+                                    </li>
+                                    <li class="time">{{notification.time}}</li>
+                                </ul>
                             </div>
                         </a>
 
@@ -81,11 +96,15 @@
     <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
 <mat-menu #profile="matMenu" class="mymegamenu">
     <button mat-menu-item>
-        <mat-icon>settings</mat-icon> Settings </button>
+        <mat-icon>settings</mat-icon> Settings
+    </button>
     <button mat-menu-item>
-        <mat-icon>account_box</mat-icon> Profile </button>
+        <mat-icon>account_box</mat-icon> Profile
+    </button>
     <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+        <mat-icon>notifications_off</mat-icon> Disable notifications
+    </button>
     <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+        <mat-icon>exit_to_app</mat-icon> Sign Out
+    </button>
 </mat-menu>
