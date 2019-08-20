@@ -106,14 +106,25 @@ table input {
   border: 0px;
   line-height: 40px;
 }
+
+.table-checkbox {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.table-select {
+  width: 80%;
+  font-size: 14px;
+  border: 0px;
+  background: transparent;
+}
 .no-bdr-btm {
   border-bottom: 0px !important;
 }
-.set-bdr-rt{
+.set-bdr-rt {
   border-right: 1px solid #e0e0e0;
 }
 
 /* Restricts mat tab to auto scroll to top of the page */
-mat-tab-group{
+mat-tab-group {
   min-height: 300px;
 }

@@ -61,6 +61,10 @@ export const AppRoutes: Routes = [
       {
         path: '',
         loadChildren: './modules/process/process.module#ProcessModule'
+      },
+      {
+        path: 'planning',
+        loadChildren: './modules/planning/planning.module#PlanningModule'
       }
     ]
   },

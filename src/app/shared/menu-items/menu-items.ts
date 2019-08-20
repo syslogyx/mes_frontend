@@ -276,6 +276,34 @@ const MENUITEMS = [
     icon: "panorama_wide_angle",
   },
   //Other menus ends here
+
+  // Planning Menu starts
+  {
+    state: "",
+    name: "Planning",
+    type: "saperator",
+    icon: "av_timer",
+  },
+  {
+    state: "planning",
+    name: "Planning",
+    icon: "local_library",
+    type: "sub",
+    children: [
+      {
+        state: "dashboard",
+        name: "Dashboard",
+        type: "link",
+      },
+      {
+        state: "production_plan",
+        name: "Production Plan",
+        type: "link",
+      },
+    ],
+  },
+  // Planning Menu ends
+
   //Master Setting Menus starts
   {
     state: "",
@@ -317,7 +345,7 @@ export class MenuItems {
       },
       error => {
         console.log("Server error :", error);
-        this.utility.openSnackBar("Something went wrong!!", "");
+        this.utility.openSnackBar("Cannot connect to server !!", "");
       }
     );
   }
