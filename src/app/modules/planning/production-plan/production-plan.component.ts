@@ -79,6 +79,56 @@ const ELEMENT_DATA_CAMPAIGN: any[] = [
   },
 ];
 
+// define dummy constant for parting list
+const ELEMENT_DATA_PARTING: any[] = [
+  {
+    coil_no: 123456,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 300,
+    reason: "Coil Breakage",
+  },
+  {
+    coil_no: 123456,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 300,
+    reason: "Coil Breakage",
+  },
+  {
+    coil_no: 123456,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 300,
+    reason: "Coil Breakage",
+  },
+];
+
+// define dummy constant for activity log list
+const ELEMENT_DATA_ACTIVITY_LOG: any[] = [
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
+  },
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
+  },
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
+  },
+];
+
 @Component({
   selector: "app-production-plan",
   templateUrl: "./production-plan.component.html",
@@ -87,6 +137,8 @@ const ELEMENT_DATA_CAMPAIGN: any[] = [
 export class ProductionPlanComponent implements OnInit {
   dataSourceCoils2ProdPlan: any[];
   dataSourceCampaigns: any[];
+  datasourceParting: any[];
+  activityLog: any[];
   displayedColumnsProdPlan: string[] = [
     "check_box",
     "sr_no",
@@ -110,12 +162,25 @@ export class ProductionPlanComponent implements OnInit {
     "time",
     "status",
   ];
+
+  displayedColumnsParting: string[] = [
+    "sr_no",
+    "coil_no",
+    "width",
+    "thickness",
+    "parted_count",
+    "quantity",
+    "reason",
+  ];
+
   tooltipOption: any;
-  constructor(private utility:UtilityService) {}
+  constructor(private utility: UtilityService) {}
 
   ngOnInit() {
     this.tooltipOption = this.utility.settings().tooltip;
     this.dataSourceCoils2ProdPlan = ELEMENT_PROD_PLAN;
     this.dataSourceCampaigns = ELEMENT_DATA_CAMPAIGN;
+    this.datasourceParting = ELEMENT_DATA_PARTING;
+    this.activityLog = ELEMENT_DATA_ACTIVITY_LOG;
   }
 }

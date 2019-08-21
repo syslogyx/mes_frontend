@@ -21,83 +21,7 @@
             <mat-icon>picture_as_pdf</mat-icon>
           </button>
         </mat-card-title>
-        <!-- ============================================================== -->
-        <!-- Filter starts here -->
-        <!-- ============================================================== -->
-        <form class="basic-form m-t-30 p-10" *ngIf="panelOpenState">
-          <div fxLayout="row wrap">
 
-            <!-- select Customer column -->
-            <div class="p-r-20" fxFlex.gt-md="25" fxFlex="100">
-              <mat-form-field>
-                <mat-select placeholder="Select SO No.">
-                  <mat-option value="option">Option</mat-option>
-                  <mat-option value="option">Option2</mat-option>
-                  <mat-option value="option">Option3</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!-- select Customer column ends here-->
-
-            <!-- thickness column -->
-            <div fxFlex.gt-md="25" fxFlex="100">
-              <mat-form-field>
-                <mat-select placeholder="Select Customer">
-                  <mat-option value="option">Option</mat-option>
-                  <mat-option value="option">Option2</mat-option>
-                  <mat-option value="option">Option3</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!-- thickness column ends here-->
-
-            <!-- select coil no column -->
-            <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
-              <mat-form-field>
-                <mat-select placeholder="Select Material Code">
-                  <mat-option value="option">Option</mat-option>
-                  <mat-option value="option">Option2</mat-option>
-                  <mat-option value="option">Option3</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!-- select coil no column ends here -->
-
-            <!-- select grade column -->
-            <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
-              <mat-form-field>
-                <mat-select placeholder="Select Priotity">
-                  <mat-option value="option">High</mat-option>
-                  <mat-option value="option">Medium</mat-option>
-                  <mat-option value="option">Low</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!-- select grade column ends here-->
-          </div>
-
-          <div fxLayout="row wrap">
-
-            <!-- select so column -->
-            <div fxFlex.gt-md="25" fxFlex="100">
-              <mat-form-field>
-                <mat-select placeholder="Select Grade">
-                  <mat-option value="option">Option</mat-option>
-                  <mat-option value="option">Option2</mat-option>
-                  <mat-option value="option">Option3</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <!-- select so no column ends here-->
-
-
-            <!-- search column -->
-            <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
-              <button class="m-t-10" mat-raised-button color="primary">SEARCH</button>
-            </div>
-            <!-- search column ends here-->
-          </div>
-        </form>
         <br>
         <!-- Table Section starts here -->
 
@@ -112,6 +36,86 @@
               <mat-tab-group>
                 <mat-tab label="CPL">
                   <mat-card-content class="card-content">
+                    <!-- ============================================================== -->
+                    <!-- Filter starts here -->
+                    <!-- ============================================================== -->
+                    <form class="basic-form m-t-30 p-10" *ngIf="panelOpenState">
+                      <div fxLayout="row wrap">
+
+                        <!-- select Customer column -->
+                        <div class="p-r-20" fxFlex.gt-md="25" fxFlex="100">
+                          <mat-form-field>
+                            <mat-select placeholder="Select SO No.">
+                              <mat-option value="option">Option</mat-option>
+                              <mat-option value="option">Option2</mat-option>
+                              <mat-option value="option">Option3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <!-- select Customer column ends here-->
+
+                        <!-- thickness column -->
+                        <div fxFlex.gt-md="25" fxFlex="100">
+                          <mat-form-field>
+                            <mat-select placeholder="Select Customer">
+                              <mat-option value="option">Option</mat-option>
+                              <mat-option value="option">Option2</mat-option>
+                              <mat-option value="option">Option3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <!-- thickness column ends here-->
+
+                        <!-- select coil no column -->
+                        <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
+                          <mat-form-field>
+                            <mat-select placeholder="Select Material Code">
+                              <mat-option value="option">Option</mat-option>
+                              <mat-option value="option">Option2</mat-option>
+                              <mat-option value="option">Option3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <!-- select coil no column ends here -->
+
+                        <!-- select grade column -->
+                        <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
+                          <mat-form-field>
+                            <mat-select placeholder="Select Priotity">
+                              <mat-option value="option">High</mat-option>
+                              <mat-option value="option">Medium</mat-option>
+                              <mat-option value="option">Low</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <!-- select grade column ends here-->
+                      </div>
+
+                      <div fxLayout="row wrap">
+
+                        <!-- select so column -->
+                        <div fxFlex.gt-md="25" fxFlex="100">
+                          <mat-form-field>
+                            <mat-select placeholder="Select Grade">
+                              <mat-option value="option">Option</mat-option>
+                              <mat-option value="option">Option2</mat-option>
+                              <mat-option value="option">Option3</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <!-- select so no column ends here-->
+
+
+                        <!-- search column -->
+                        <div class="p-l-20" fxFlex.gt-md="25" fxFlex="100">
+                          <button class="m-t-10" mat-raised-button color="primary">SEARCH</button>
+                        </div>
+                        <!-- search column ends here-->
+                      </div>
+                    </form>
+                    <!-- Filter Ends here -->
+
+
                     <!-- Table section starts here -->
                     <div class="responsive-table">
                       <table id="produciton-plan-table" mat-table [dataSource]="dataSourceCoils2ProdPlan"
@@ -233,10 +237,10 @@
                 </mat-tab>
 
                 <mat-tab label="CCL">
-                    <mat-card-content class="card-content">
-                      <span>CCL Section</span>
-                    </mat-card-content>
-                  </mat-tab>
+                  <mat-card-content class="card-content">
+                    <span>CCL Section</span>
+                  </mat-card-content>
+                </mat-tab>
 
               </mat-tab-group>
             </mat-card>
@@ -322,13 +326,85 @@
 
         <mat-tab label="Parting">
           <mat-card-content class="card-content">
-            <span>Parting Section</span>
+            <!-- Table section starts here -->
+            <div class="responsive-table">
+              <table id="parting-table" mat-table [dataSource]="datasourceParting" class="m-t-30">
+                <!-- Sr No. Column-->
+                <ng-container matColumnDef="sr_no">
+                  <th mat-header-cell *matHeaderCellDef> Sr. No. </th>
+                  <td mat-cell *matCellDef="let element,let i = index;"> {{i+1}} </td>
+                </ng-container>
+
+                <!-- Coil No Column -->
+                <ng-container matColumnDef="coil_no">
+                  <th mat-header-cell *matHeaderCellDef> Coil No </th>
+                  <td mat-cell *matCellDef="let element"> {{element.coil_no}} </td>
+                </ng-container>
+
+                <!-- Width Column -->
+                <ng-container matColumnDef="width">
+                  <th mat-header-cell *matHeaderCellDef> Width
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.width}} </td>
+                </ng-container>
+
+                <!-- Thickness Column -->
+                <ng-container matColumnDef="thickness">
+                  <th mat-header-cell *matHeaderCellDef> THK (mm) </th>
+                  <td mat-cell *matCellDef="let element"> {{element.thickness}}
+                  </td>
+                </ng-container>
+
+                <!-- Parted Count Column -->
+                <ng-container matColumnDef="parted_count">
+                  <th mat-header-cell *matHeaderCellDef> Parted Count </th>
+                  <td mat-cell *matCellDef="let element"> {{element.parted_count}} </td>
+                </ng-container>
+
+                <!-- Quantity Column -->
+                <ng-container matColumnDef="quantity">
+                  <th mat-header-cell *matHeaderCellDef> QTY. (T) </th>
+                  <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+                </ng-container>
+
+                <!-- Reason Column -->
+                <ng-container matColumnDef="reason">
+                  <th mat-header-cell *matHeaderCellDef> Reason </th>
+                  <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsParting"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsParting;"></tr>
+              </table>
+            </div>
+            <!-- Table Section ends here -->
           </mat-card-content>
         </mat-tab>
 
         <mat-tab label="Activity Log">
           <mat-card-content class="card-content">
-            <span>Activity Log Section</span>
+            <div fxLayout="row wrap" class="log-row" *ngFor="let item of activityLog">
+
+              <div fxFlex.gt-md="7" fxFlex="100">
+                <div class="operator-icon">
+                  <mat-icon>account_circle</mat-icon>
+                </div>
+              </div>
+              <div fxFlex.gt-md="73" fxFlex="100">
+                <h5 class="operator-name">{{item.operator_name}}</h5>
+                <div>{{item.description}}
+                </div>
+              </div>
+
+              <div fxFlex.gt-md="20" fxFlex="100">
+                <span class="pull-right">
+                  <h5 class="operator-name">&nbsp;</h5>
+                  <mat-icon class="date-time-mat-icon pl-5">access_time</mat-icon>
+                  <span>{{item.date_time}}</span>
+                </span>
+              </div>
+            </div>
+
           </mat-card-content>
         </mat-tab>
 
