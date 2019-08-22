@@ -128,3 +128,7 @@ table input {
 mat-tab-group {
   min-height: 300px;
 }
+
+.text-violet{
+  color: #7460ee;
+}

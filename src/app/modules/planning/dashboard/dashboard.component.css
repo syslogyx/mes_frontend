@@ -1,0 +1,78 @@
+.fy-yr {
+  color: #000000de !important;
+}
+.growth-chart {
+  font-size: 35px;
+  padding-top: 10px;
+}
+.growth-label {
+  font-size: 10px;
+  font-weight: 500;
+}
+.growth-value {
+  font-size: 25px;
+}
+.row-btm-bdr {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-btm-bdr {
+  border-bottom: 1px solid #e0e0e04d;
+}
+
+.bold-std {
+  font-weight: 400;
+}
+.tab-name {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.tab-value {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: -8px;
+}
+.tab-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tab-line-ht {
+  line-height: 15px;
+}
+
+.tab-last-ul {
+  margin-top: -10px;
+}
+
+.sphere-span {
+  background: #a59e9e57;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.piechart{
+  margin-left: -25px;
+}
+
+/* Tab Css starts here */
+.tab-parent {
+  overflow-x: auto;
+}
+.btn-tab-container {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+.btn-tab {
+  display: table-cell;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  border-radius: 4px;
+  min-width: 120px;
+}
+/* Tab css ends here */

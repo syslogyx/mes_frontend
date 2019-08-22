@@ -2,11 +2,12 @@
 <!-- sidebar -->
 <!-- ============================================================== -->
 <!-- User Profile Section -->
-<div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
-    <div class="profile-img">
-        <img src="assets/images/users/profile.png" alt="user"> </div>
+<div class="user-profile" style="background: url(assets/images/machine/machine_bg.png) no-repeat;">
+    <div class="profile-img" style="margin-bottom: 55px">
+        <!-- <img src="assets/images/website/profile_thumbnail.png" alt="user"> -->
+    </div>
     <div class="profile-text">
-        <a [matMenuTriggerFor]="sdprofile" class=""> Markarn Doe
+        <a [matMenuTriggerFor]="sdprofile" class=""> HOD
             <i class="ti-angle-down font-12 m-l-5"></i>
         </a>
     </div>
@@ -28,7 +29,8 @@
 <!-- User Profile Section ends -->
 
 <mat-nav-list appAccordion>
-    <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuitem.state}}">
+    <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected"
+        group="{{menuitem.state}}">
         <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
             <mat-icon>{{ menuitem.icon }}</mat-icon>
             <span>{{ menuitem.name }}</span>
@@ -58,8 +60,8 @@
         </a>
         <mat-nav-list class="sub-item" *ngIf="menuitem.type === 'sub'">
             <mat-list-item *ngFor="let childitem of menuitem.children" routerLinkActive="selected">
-                <a [routerLink]="['/', menuitem.state, childitem.state ]"  *ngIf="childitem.type === 'link'" class="relative"
-                    routerLinkActive="selected" (click)="itemSelect[i]=j">{{ childitem.name}}</a>
+                <a [routerLink]="['/', menuitem.state, childitem.state ]" *ngIf="childitem.type === 'link'"
+                    class="relative" routerLinkActive="selected" (click)="itemSelect[i]=j">{{ childitem.name}}</a>
             </mat-list-item>
             <mat-list-item *ngFor="let childitem of menuitem.children; let j=index">
                 <a class="" href="javascript: void(0);" *ngIf="childitem.type === 'subchild'" (click)="itemSelect[i]=j"
@@ -68,9 +70,10 @@
                     <span fxFlex></span>
                     <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
                 </a>
-                <mat-nav-list class="child-sub-item" *ngIf="childitem.type === 'subchild'" >
+                <mat-nav-list class="child-sub-item" *ngIf="childitem.type === 'subchild'">
                     <mat-list-item *ngFor="let child of childitem.subchildren" routerLinkActive="selected">
-                        <a [routerLink]="['/', menuitem.state, childitem.state, child.state ]" routerLinkActive="selected" >{{child.name}}</a>
+                        <a [routerLink]="['/', menuitem.state, childitem.state, child.state ]"
+                            routerLinkActive="selected">{{child.name}}</a>
                     </mat-list-item>
                 </mat-nav-list>
             </mat-list-item>

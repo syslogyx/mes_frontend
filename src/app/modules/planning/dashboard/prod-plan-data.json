@@ -1,0 +1,16 @@
+{
+  "Bar": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [[9, 4, 11, 7, 10, 12], [3, 2, 9, 5, 8, 10]]
+  },
+  "LineWithArea": {
+    "labels": ["APR", "MAY", "JUN", "JULY", "AUG", "SEP", "OCT", "NOV","DEC","JAN","FEB","MAR"],
+    "series": [
+      [13850, 14100, 13850, 13950, 13850],
+      [13850, 15000, 13850, 13950, 15000]
+    ]
+  },
+  "Pie": {
+    "series": [20, 10, 30, 40]
+  }
+}

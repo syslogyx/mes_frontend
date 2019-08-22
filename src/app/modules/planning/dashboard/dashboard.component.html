@@ -1,3 +1,299 @@
-<p>
-  dashboard works!
-</p>
+<!-- Production Summary Graph -->
+<div fxLayout="row wrap">
+  <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="row wrap" class="row-btm-bdr">
+          <div fxFlex.gt-md="65" fxFlex="100">
+            <mat-card-title>Production Summary</mat-card-title>
+          </div>
+
+          <div fxFlex.gt-md="5" fxFlex="100">
+            <i class="fa fa-line-chart growth-chart text-info"></i>
+          </div>
+
+          <div fxFlex.gt-md="10" fxFlex="100">
+            <div class="growth-label">LAST MONTH PROD.</div>
+            <div class="growth-value text-info">55000</div>
+          </div>
+
+          <div fxFlex.gt-md="5" fxFlex="100">
+          </div>
+
+          <div fxFlex.gt-md="5" fxFlex="100">
+            <i class="fa fa-line-chart growth-chart text-success"></i>
+          </div>
+
+          <div fxFlex.gt-md="10" fxFlex="100">
+            <div class="growth-label">LAST MONTH PROD.</div>
+            <div class="growth-value text-success">48000</div>
+          </div>
+        </div>
+
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+
+        <div class="linearea" style="height:360px;">
+          <x-chartist class="" [data]="lineChart1.data" [type]="lineChart1.type" [options]="lineChart1.options"
+            [responsiveOptions]="lineChart1.responsiveOptions" [events]="lineChart1.events"> </x-chartist>
+        </div>
+        <ul class="list-inline text-center p-t-10">
+          <li>
+            <h6 class="text-muted m-0 fy-yr">
+              <strong>FY 19-20</strong></h6>
+          </li>
+          <li>
+            <h6 class="text-muted text-success m-0">
+              <i class="fa fa-circle font-10 m-r-10 "></i>Expected</h6>
+          </li>
+          <li>
+            <h6 class="text-muted  text-info  m-0">
+              <i class="fa fa-circle font-10 m-r-10"></i>Actual</h6>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Card Layout starts here -->
+<div fxLayout="row wrap" class="tab-parent">
+  <div xFlex.gt-md="100" fxFlex="100" class="btn-tab-container">
+    <div class="btn-tab bg-info text-white" [ngClass]="shadow1" (mouseover)="shadow1='mat-elevation-z20'"
+      (mouseout)="shadow1=''">
+      <ul class="list-inline tab-btm-bdr">
+        <li class="tab-name">CPL</li>
+        <li class="pull-right"><a class="text-white bold-std" [routerLink]="['/planning/production_plan']"><u>View More</u></a></li>
+      </ul>
+
+      <ul class="list-inline tab-value tab-line-ht">
+        <li>5000</li>
+        <li class="pull-right">8000</li>
+      </ul>
+
+      <ul class="list-inline tab-subtitle tab-line-ht">
+        <li>Planned</li>
+        <li class="pull-right">WIP</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht">
+        <li class="tab-subtitle">Current Shift <span class="sphere-span">3</span></li>
+        <li class="pull-right tab-value">3000</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht tab-last-ul">
+        <li>&nbsp;</li>
+        <li class="pull-right tab-subtitle">Achieved</li>
+      </ul>
+    </div>
+
+    <div class="btn-tab bg-warning text-white" [ngClass]="shadow2" (mouseover)="shadow2='mat-elevation-z20'"
+      (mouseout)="shadow2=''">
+      <ul class="list-inline tab-btm-bdr">
+        <li class="tab-name">MILL</li>
+        <li class="pull-right"><a class="text-white bold-std" href="javascript:void(0)"><u>View More</u></a></li>
+      </ul>
+
+      <ul class="list-inline tab-value tab-line-ht">
+        <li>5000</li>
+        <li class="pull-right">8000</li>
+      </ul>
+
+      <ul class="list-inline tab-subtitle tab-line-ht">
+        <li>Planned</li>
+        <li class="pull-right">WIP</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht">
+        <li class="tab-subtitle">Current Shift <span class="sphere-span">3</span></li>
+        <li class="pull-right tab-value">3000</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht tab-last-ul">
+        <li>&nbsp;</li>
+        <li class="pull-right tab-subtitle">Achieved</li>
+      </ul>
+    </div>
+
+    <div class="btn-tab bg-danger text-white" [ngClass]="shadow3" (mouseover)="shadow3='mat-elevation-z20'"
+      (mouseout)="shadow3=''">
+      <ul class="list-inline tab-btm-bdr">
+        <li class="tab-name">CGL</li>
+        <li class="pull-right"><a class="text-white bold-std" href="javascript:void(0)"><u>View More</u></a></li>
+      </ul>
+
+      <ul class="list-inline tab-value tab-line-ht">
+        <li>5000</li>
+        <li class="pull-right">8000</li>
+      </ul>
+
+      <ul class="list-inline tab-subtitle tab-line-ht">
+        <li>Planned</li>
+        <li class="pull-right">WIP</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht">
+        <li class="tab-subtitle">Current Shift <span class="sphere-span">3</span></li>
+        <li class="pull-right tab-value">3000</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht tab-last-ul">
+        <li>&nbsp;</li>
+        <li class="pull-right tab-subtitle">Achieved</li>
+      </ul>
+    </div>
+
+    <div class="btn-tab bg-primary text-white" [ngClass]="shadow4" (mouseover)="shadow4='mat-elevation-z20'"
+      (mouseout)="shadow4=''">
+      <ul class="list-inline tab-btm-bdr">
+        <li class="tab-name">CCL</li>
+        <li class="pull-right"><a class="text-white bold-std" href="javascript:void(0)"><u>View More</u></a></li>
+      </ul>
+
+      <ul class="list-inline tab-value tab-line-ht">
+        <li>5000</li>
+        <li class="pull-right">8000</li>
+      </ul>
+
+      <ul class="list-inline tab-subtitle tab-line-ht">
+        <li>Planned</li>
+        <li class="pull-right">WIP</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht">
+        <li class="tab-subtitle">Current Shift <span class="sphere-span">3</span></li>
+        <li class="pull-right tab-value">3000</li>
+      </ul>
+
+      <ul class="list-inline tab-line-ht tab-last-ul">
+        <li>&nbsp;</li>
+        <li class="pull-right tab-subtitle">Achieved</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Card Layout ends here -->
+
+<div fxLayout="row wrap">
+  <div fxFlex.gt-md="70" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="row wrap">
+          <div fxFlex.gt-md="45" fxFlex="100">
+            <mat-card-title>In Progress SOs</mat-card-title>
+          </div>
+
+          <div fxFlex.gt-md="25" fxFlex="100">
+            <div class="growth-label"><strong>P</strong> : Pickling</div>
+            <div class="growth-label"><strong>G</strong> : Galvanizing/Galvalume</div>
+          </div>
+
+          <div fxFlex.gt-md="20" fxFlex="100">
+            <div class="growth-label"><strong>M</strong> : MILL</div>
+            <div class="growth-label"><strong>C</strong> : Color Coating</div>
+          </div>
+
+          <div fxFlex.gt-md="10" fxFlex="100">
+            <div class="growth-label"><strong>S</strong> : Skin Pass</div>
+            <div class="growth-label"><strong>D</strong> : Dispatch</div>
+          </div>
+        </div>
+        <br>
+        <!-- Table section starts here -->
+        <div class="responsive-table">
+          <table id="so-progress-table" mat-table [dataSource]="dataSourceProgressSo">
+            <!-- Sr No. Column-->
+            <ng-container matColumnDef="sr_no">
+              <th mat-header-cell *matHeaderCellDef> Sr. No. </th>
+              <td mat-cell *matCellDef="let element,let i = index;"> {{i+1}} </td>
+            </ng-container>
+
+            <!-- SO No Column -->
+            <ng-container matColumnDef="so_no">
+              <th mat-header-cell *matHeaderCellDef> SO No </th>
+              <td mat-cell *matCellDef="let element"> {{element.so_no}} </td>
+            </ng-container>
+
+            <!-- Customer Column -->
+            <ng-container matColumnDef="customer">
+              <th mat-header-cell *matHeaderCellDef> Customer
+              </th>
+              <td mat-cell *matCellDef="let element"> {{element.customer}} </td>
+            </ng-container>
+
+            <!-- Order Qty. Column -->
+            <ng-container matColumnDef="order_quantity">
+              <th mat-header-cell *matHeaderCellDef> Order Qty. </th>
+              <td mat-cell *matCellDef="let element"> {{element.order_quantity}}
+              </td>
+            </ng-container>
+
+            <!-- Parted Count Column -->
+            <ng-container matColumnDef="parted_count">
+              <th mat-header-cell *matHeaderCellDef> Parted Count </th>
+              <td mat-cell *matCellDef="let element"> {{element.parted_count}} </td>
+            </ng-container>
+
+            <!-- Width Column -->
+            <ng-container matColumnDef="width">
+              <th mat-header-cell *matHeaderCellDef> Width </th>
+              <td mat-cell *matCellDef="let element"> {{element.width}} </td>
+            </ng-container>
+
+            <!-- Thickness Column -->
+            <ng-container matColumnDef="thickness">
+              <th mat-header-cell *matHeaderCellDef> THK </th>
+              <td mat-cell *matCellDef="let element"> {{element.thickness}} </td>
+            </ng-container>
+
+            <!-- Current Process Column -->
+            <ng-container matColumnDef="current_process">
+              <th mat-header-cell *matHeaderCellDef> Current Process </th>
+              <td mat-cell *matCellDef="let element"> {{element.current_process}} </td>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Status </th>
+              <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsProgressSo"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsProgressSo;"></tr>
+          </table>
+        </div>
+        <!-- Table Section ends here -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex.gt-md="30" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>CPL</mat-card-title>
+        <div class="piechart text-center">
+          <x-chartist class="" [data]="donuteChart1.data" [type]="donuteChart1.type" [options]="donuteChart1.options"
+            [responsiveOptions]="donuteChart1.responsiveOptions" [events]="donuteChart1.events">
+          </x-chartist>
+        </div>
+        <ul class="list-inline text-center">
+          <li>
+            <h6 class="text-muted text-info m-0">
+              <i class="fa fa-circle font-10 m-r-10 "></i>Completed</h6>
+          </li>
+          <li>
+            <h6 class="text-muted  text-success  m-0">
+              <i class="fa fa-circle font-10 m-r-10"></i>In Progress</h6>
+          </li>
+          <li>
+            <h6 class="text-violet  m-0">
+              <i class="fa fa-circle font-10 m-r-10"></i>Pending</h6>
+          </li>
+          <li>
+            <h6 class="text-muted m-0">
+              <i class="fa fa-circle font-10 m-r-10"></i>Rework</h6>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

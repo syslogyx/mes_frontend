@@ -13,14 +13,14 @@
         <ul>
             <li>
                 <div class="drop-title">Notifications
-                    <a href="#" class="pull-right" style="color: #000000de;text-decoration: underline;">View All</a>
+                    <a href="javascript:void(0)" class="pull-right" style="color: #000000de;text-decoration: underline;">View All</a>
                 </div>
             </li>
             <li>
                 <div class="message-center">
                     <perfect-scrollbar [config]="config">
                         <!-- Message -->
-                        <a href="#" *ngFor="let notification of notifications">
+                        <a href="javascript:void(0)" *ngFor="let notification of notifications">
                             <div class="p-r-10">
                                 <!-- <i class="{{notification.icon}}"></i> -->
                                 <mat-icon style="color: #1e88e5">notifications_active</mat-icon>
@@ -71,7 +71,7 @@
                 <div class="message-center">
                     <perfect-scrollbar [config]="config">
                         <!-- Message -->
-                        <a href="#" *ngFor="let mymessage of mymessages">
+                        <a href="javascript:void(0)" *ngFor="let mymessage of mymessages">
                             <div class="user-img">
                                 <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
                                 <span class="profile-status {{mymessage.status}} pull-right"></span>
@@ -93,8 +93,8 @@
 <!-- Profile - style you can find in header.scss -->
 <!-- ============================================================== -->
 <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5">
-    <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
-<mat-menu #profile="matMenu" class="mymegamenu">
+    <img src="assets/images/website/profile_thumbnail.png" alt="user" class="profile-pic"> </button>
+<!-- <mat-menu #profile="matMenu" class="mymegamenu">
     <button mat-menu-item>
         <mat-icon>settings</mat-icon> Settings
     </button>
@@ -107,4 +107,4 @@
     <button mat-menu-item>
         <mat-icon>exit_to_app</mat-icon> Sign Out
     </button>
-</mat-menu>
+</mat-menu> -->
