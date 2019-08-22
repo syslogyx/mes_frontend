@@ -63,32 +63,25 @@ export class AppHeaderComponent {
   // This is for Mymessages
   mymessages: Object[] = [
     {
-      useravatar: 'assets/images/users/1.jpg',
+      useravatar: 'assets/images/website/profile_thumbnail.png',
       status: 'online',
-      from: 'Pavan kumar',
-      subject: 'Just see the my admin!',
+      from: 'CPL',
+      subject: 'CPL is under maintenance',
       time: '9:30 AM'
     },
     {
-      useravatar: 'assets/images/users/2.jpg',
+      useravatar: 'assets/images/website/profile_thumbnail.png',
       status: 'busy',
-      from: 'Sonu Nigam',
-      subject: 'I have sung a song! See you at',
-      time: '9:10 AM'
+      from: 'CPL',
+      subject: 'CPL is under maintenance',
+      time: '9:30 AM'
     },
     {
-      useravatar: 'assets/images/users/2.jpg',
-      status: 'away',
-      from: 'Arijit Sinh',
-      subject: 'I am a singer!',
-      time: '9:08 AM'
-    },
-    {
-      useravatar: 'assets/images/users/4.jpg',
-      status: 'offline',
-      from: 'Pavan kumar',
-      subject: 'Just see the my admin!',
-      time: '9:00 AM'
+      useravatar: 'assets/images/website/profile_thumbnail.png',
+      status: 'busy',
+      from: 'CPL',
+      subject: 'CPL is under maintenance',
+      time: '9:30 AM'
     }
   ];
 }
