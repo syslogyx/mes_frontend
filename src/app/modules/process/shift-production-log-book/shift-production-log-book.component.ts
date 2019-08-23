@@ -86,6 +86,13 @@ const ELEMENT_DATA_COILS_PROCESS: PeriodicElement[] = [
   styleUrls: ["./shift-production-log-book.component.css"],
 })
 export class ShiftProductionLogBookComponent implements OnInit {
+  shadow1:any;
+  shadow2:any;
+  shadow3:any;
+  shadow4:any;
+  shadow5:any;
+  shadow6:any;
+  panelOpenState:any;
   tooltipOption: object;
   dataSourceCoils2Process: any[];
   displayedTopColumnsCoils2Process: string[] = [

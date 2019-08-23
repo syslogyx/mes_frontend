@@ -50,6 +50,11 @@ export interface Chart {
   styleUrls: ["./dashboard.component.css"],
 })
 export class DashboardComponent implements OnInit {
+  shadow1:any;
+  shadow2:any;
+  shadow3:any;
+  shadow4:any;
+
   dataSourceProgressSo: any[];
   // Line chart
   lineChart1: Chart = {

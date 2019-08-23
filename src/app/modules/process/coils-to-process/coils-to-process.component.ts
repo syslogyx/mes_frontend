@@ -79,16 +79,66 @@ const ELEMENT_DATA_CAMPAIGN: any[] = [
     status: "In Progress",
   },
   {
-    campaign_id: "CAMP01",
+    campaign_id: "CAMP02",
     width: "400",
     time: "20 Hrs",
-    status: "Stop",
+    status: "Finished",
   },
   {
-    campaign_id: "CAMP01",
+    campaign_id: "CAMP03",
     width: "400",
     time: "20 Hrs",
-    status: "Stop",
+    status: "Finished",
+  },
+];
+
+// define dummy constant for parting list
+const ELEMENT_DATA_PARTING: any[] = [
+  {
+    coil_no: 1234544,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 300,
+    reason: "Coil Breakage",
+  },
+  {
+    coil_no: 1234445,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 150,
+    reason: "",
+  },
+  {
+    coil_no: 1234446,
+    width: 400,
+    thickness: 0.021,
+    parted_count: 2,
+    quantity: 149,
+    reason: "",
+  },
+];
+
+// define dummy constant for activity log list
+const ELEMENT_DATA_ACTIVITY_LOG: any[] = [
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
+  },
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
+  },
+  {
+    operator_name: "Operator Name",
+    description:
+      "SO No. 440990108, 401004588, 401004588 are Clubbed and Planned",
+    date_time: "28/06/2019 16:01:14",
   },
 ];
 
@@ -98,8 +148,11 @@ const ELEMENT_DATA_CAMPAIGN: any[] = [
   styleUrls: ["./coils-to-process.component.css"],
 })
 export class CoilsToProcessComponent implements OnInit {
+  panelOpenState:any;
   dataSourceCoils2Process: any[];
   dataSourceCampaigns: any[];
+  datasourceParting: any[];
+  activityLog: any[];
   displayedTopColumnsCoils2Process: string[] = [
     "sr_no_rs",
     "date_rs",
@@ -139,6 +192,17 @@ export class CoilsToProcessComponent implements OnInit {
     "time",
     "status",
   ];
+
+  displayedColumnsParting: string[] = [
+    "sr_no",
+    "coil_no",
+    "width",
+    "thickness",
+    "parted_count",
+    "quantity",
+    "reason",
+  ];
+
   tooltipOption: any;
 
   constructor(private utility : UtilityService) {}
@@ -147,5 +211,7 @@ export class CoilsToProcessComponent implements OnInit {
     this.tooltipOption = this.utility.settings().tooltip;
     this.dataSourceCoils2Process = ELEMENT_DATA_COILS_PROCESS;
     this.dataSourceCampaigns = ELEMENT_DATA_CAMPAIGN;
+    this.datasourceParting = ELEMENT_DATA_PARTING;
+    this.activityLog = ELEMENT_DATA_ACTIVITY_LOG;
   }
 }

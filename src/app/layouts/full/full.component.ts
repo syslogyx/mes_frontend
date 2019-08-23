@@ -1,6 +1,6 @@
-import * as $ from 'jquery';
-import { MediaMatcher } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
+import * as $ from "jquery";
+import { MediaMatcher } from "@angular/cdk/layout";
+import { Router } from "@angular/router";
 import {
   ChangeDetectorRef,
   Component,
@@ -9,22 +9,22 @@ import {
   ViewChild,
   HostListener,
   Directive,
-  AfterViewInit
-} from '@angular/core';
-import { MenuItems } from '../../shared/menu-items/menu-items';
-import { AppHeaderComponent } from './header/header.component';
-import { AppSidebarComponent } from './sidebar/sidebar.component';
+  AfterViewInit,
+} from "@angular/core";
+import { MenuItems } from "../../shared/menu-items/menu-items";
+import { AppHeaderComponent } from "./header/header.component";
+import { AppSidebarComponent } from "./sidebar/sidebar.component";
 
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
 /** @title Responsive sidenav */
 @Component({
-  selector: 'app-full-layout',
-  templateUrl: 'full.component.html',
-  styleUrls: []
+  selector: "app-full-layout",
+  templateUrl: "full.component.html",
+  styleUrls: [],
 })
 export class FullComponent implements OnDestroy, AfterViewInit {
   mobileQuery: MediaQueryList;
-  dir = 'ltr';
+  dir = "ltr";
   green: boolean;
   blue: boolean;
   dark: boolean;
@@ -40,9 +40,10 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public menuItems: MenuItems
+    public menuItems: MenuItems,
+    private router: Router
   ) {
-    this.mobileQuery = media.matchMedia('(min-width: 768px)');
+    this.mobileQuery = media.matchMedia("(min-width: 768px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
@@ -52,8 +53,8 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   }
   ngAfterViewInit() {
     // This is for the topbar search
-    (<any>$('.srh-btn, .cl-srh-btn')).on('click', function() {
-      (<any>$('.app-search')).toggle(200);
+    (<any>$(".srh-btn, .cl-srh-btn")).on("click", function() {
+      (<any>$(".app-search")).toggle(200);
     });
     // This is for the megamenu
   }

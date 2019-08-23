@@ -179,23 +179,23 @@
 
                                 <!-- Start Time Column -->
                                 <ng-container matColumnDef="start_time">
-                                    <mat-header-cell *matHeaderCellDef> Start Time </mat-header-cell>
+                                    <mat-header-cell *matHeaderCellDef> Start Time (HH:MM)</mat-header-cell>
                                     <mat-cell *matCellDef="let element">
-                                        <span class="header-label">Start Time</span>
+                                        <span class="header-label">Start Time (HH:MM)</span>
                                         {{element.start_time}} </mat-cell>
                                 </ng-container>
 
                                 <!-- Finish Time Column -->
                                 <ng-container matColumnDef="finish_time">
-                                    <mat-header-cell *matHeaderCellDef> Finish Time </mat-header-cell>
+                                    <mat-header-cell *matHeaderCellDef> Finish Time (HH:MM)</mat-header-cell>
                                     <mat-cell *matCellDef="let element">
-                                        <span class="header-label">Finish Time</span>
+                                        <span class="header-label">Finish Time (HH:MM)</span>
                                         {{element.finish_time}} </mat-cell>
                                 </ng-container>
 
                                 <!-- Delay Column -->
                                 <ng-container matColumnDef="delay">
-                                    <mat-header-cell *matHeaderCellDef> Delay </mat-header-cell>
+                                    <mat-header-cell *matHeaderCellDef> Delay (HH:MM)</mat-header-cell>
                                     <mat-cell *matCellDef="let element">
                                         <span class="header-label">delay</span>
                                         {{element.delay}} </mat-cell>
@@ -203,7 +203,7 @@
 
                                 <!-- Delay Reason Column -->
                                 <ng-container matColumnDef="delay_reason">
-                                    <mat-header-cell *matHeaderCellDef> Delay Reason </mat-header-cell>
+                                    <mat-header-cell *matHeaderCellDef> Delay Reason  </mat-header-cell>
                                     <mat-cell *matCellDef="let element">
                                         <span class="header-label">Delay Reason</span>
                                         {{element.delay_reason}} </mat-cell>
@@ -211,9 +211,9 @@
 
                                 <!-- Duration Column -->
                                 <ng-container matColumnDef="duration">
-                                    <mat-header-cell *matHeaderCellDef> Duration </mat-header-cell>
+                                    <mat-header-cell *matHeaderCellDef> Duration (HH:MM) </mat-header-cell>
                                     <mat-cell *matCellDef="let element">
-                                        <span class="header-label">Duration</span>
+                                        <span class="header-label">Duration (HH:MM)</span>
                                         {{element.duration}} </mat-cell>
                                 </ng-container>
 

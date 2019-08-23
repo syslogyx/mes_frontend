@@ -8,7 +8,7 @@ export let settings = {
       filter: false,
     },
     blade_id: {
-      title: "Blade ID",
+      title: "Knife ID",
       filter: false,
       editable: false,
     },
@@ -38,14 +38,7 @@ export let data = [
     sr_no: "2",
     blade_id: "B 2",
     last_change_date: "19/06/19",
-    length_cut: "5000",
-    maximum_capacity: "10000",
-  },
-  {
-    sr_no: "3",
-    blade_id: "B 3",
-    last_change_date: "19/06/19",
-    length_cut: "5000",
-    maximum_capacity: "10000",
-  },
+    length_cut: "7000",
+    maximum_capacity: "20000",
+  }
 ];

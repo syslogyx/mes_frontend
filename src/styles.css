@@ -129,6 +129,23 @@ mat-tab-group {
   min-height: 300px;
 }
 
-.text-violet{
+.text-violet {
   color: #7460ee;
+}
+
+.pie-val-label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.p-l-30 {
+  padding-left: 30px;
+}
+
+.p-l-20 {
+  padding-left: 20px;
+}
+
+.p-b-15 {
+  padding-bottom: 15px;
 }

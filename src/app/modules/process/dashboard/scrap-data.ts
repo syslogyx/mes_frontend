@@ -9,7 +9,7 @@ export let settings = {
       editable: false,
     },
     quantity: {
-      title: "Quantity",
+      title: "Quantity (Ton)",
       filter: false,
     },
   },
@@ -17,11 +17,11 @@ export let settings = {
 export let data = [
   {
     scrap_type: "HR Baby Coil",
-    quantity: "150",
+    quantity: "20",
   },
   {
     scrap_type: "Side Trimming",
-    quantity: "100",
+    quantity: "10",
   },
   {
     scrap_type: "HR Patta",

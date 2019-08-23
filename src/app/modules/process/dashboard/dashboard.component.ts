@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
     data: data["Pie"],
     options: {
       donut: true,
-      showLabel: true,
+      showLabel: false,
       donutWidth: 25,
       width: 300,
       height: 200,

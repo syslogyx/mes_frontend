@@ -22,41 +22,41 @@ export let settings = {
       filter: false,
       editable: false,
     },
-    picked_coil_wt: {
-      title: "Picked Coil Wt (MT)",
+    pickled_coil_wt: {
+      title: "Pickled Coil Wt (MT)",
       filter: false,
       editable: false,
     },
-    mass_bal_ratio: {
-      title: "Mass Balancing Ratio",
-      filter: false,
-      editable: false,
-    },
+    // mass_bal_ratio: {
+    //   title: "Mass Balancing Ratio",
+    //   filter: false,
+    //   editable: false,
+    // },
   },
 };
 export let data = [
   {
     sr_no: "1",
-    hr_coil_no: "13467789",
+    hr_coil_no: "KUND8K0381",
     cpl_coil_no: "KP1A9C788",
     hr_coil_wt: "23",
-    picked_coil_wt: "21",
+    pickled_coil_wt: "21",
     mass_bal_ratio: "23/21 = 1.09",
   },
   {
     sr_no: "2",
-    hr_coil_no: "13467789",
-    cpl_coil_no: "KP1A9C788",
-    hr_coil_wt: "23",
-    picked_coil_wt: "21",
+    hr_coil_no: "KUND8K0382",
+    cpl_coil_no: "KP1A9C740",
+    hr_coil_wt: "30",
+    pickled_coil_wt: "27",
     mass_bal_ratio: "23/21 = 1.09",
   },
   {
     sr_no: "3",
-    hr_coil_no: "13467789",
-    cpl_coil_no: "KP1A9C788",
-    hr_coil_wt: "23",
-    picked_coil_wt: "21",
+    hr_coil_no: "KUND8K0383",
+    cpl_coil_no: "KP1A9C741",
+    hr_coil_wt: "12",
+    pickled_coil_wt: "10",
     mass_bal_ratio: "23/21 = 1.09",
   },
 ];

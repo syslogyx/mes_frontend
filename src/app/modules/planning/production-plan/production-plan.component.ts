@@ -66,23 +66,23 @@ const ELEMENT_DATA_CAMPAIGN: any[] = [
     status: "In Progress",
   },
   {
-    campaign_id: "CAMP01",
+    campaign_id: "CAMP02",
     width: "400",
     time: "20 Hrs",
-    status: "Stop",
+    status: "Finished",
   },
   {
-    campaign_id: "CAMP01",
+    campaign_id: "CAMP03",
     width: "400",
     time: "20 Hrs",
-    status: "Stop",
+    status: "Finished",
   },
 ];
 
 // define dummy constant for parting list
 const ELEMENT_DATA_PARTING: any[] = [
   {
-    coil_no: 123456,
+    coil_no: 1234544,
     width: 400,
     thickness: 0.021,
     parted_count: 2,
@@ -90,20 +90,20 @@ const ELEMENT_DATA_PARTING: any[] = [
     reason: "Coil Breakage",
   },
   {
-    coil_no: 123456,
+    coil_no: 1234445,
     width: 400,
     thickness: 0.021,
     parted_count: 2,
-    quantity: 300,
-    reason: "Coil Breakage",
+    quantity: 150,
+    reason: "",
   },
   {
-    coil_no: 123456,
+    coil_no: 1234446,
     width: 400,
     thickness: 0.021,
     parted_count: 2,
-    quantity: 300,
-    reason: "Coil Breakage",
+    quantity: 149,
+    reason: "",
   },
 ];
 
@@ -135,6 +135,7 @@ const ELEMENT_DATA_ACTIVITY_LOG: any[] = [
   styleUrls: ["./production-plan.component.css"],
 })
 export class ProductionPlanComponent implements OnInit {
+  panelOpenState:any;
   dataSourceCoils2ProdPlan: any[];
   dataSourceCampaigns: any[];
   datasourceParting: any[];

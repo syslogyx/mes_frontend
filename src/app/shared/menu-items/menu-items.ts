@@ -246,6 +246,12 @@ const MENUITEMS = [
   //Theme menu ends
   // Other Menus Starts here
   {
+    state: "",
+    name: "CPL",
+    type: "saperator",
+    icon: "av_timer",
+  },
+  {
     state: "dashboard",
     name: "Dashboard",
     type: "link",
