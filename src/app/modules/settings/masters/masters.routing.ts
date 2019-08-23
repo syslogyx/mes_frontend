@@ -7,6 +7,10 @@ import { LeadTimeComponent } from "./lead-time/lead-time.component";
 import { ProcessFamilyComponent } from "./process-family/process-family.component";
 import { AddCodeGroupComponent } from "./add_page/add-code-group/add-code-group.component";
 import { AddCampaignComponent } from "./add_page/add-campaign/add-campaign.component";
+import { ShelfLifeComponent } from "./shelf-life/shelf-life.component";
+import { ShrinkAgeComponent } from "./shrink-age/shrink-age.component";
+import { TrimmingComponent } from "./trimming/trimming.component";
+import { ProcessTypeComponent } from "./process-type/process-type.component";
 export const MasterRoutes: Routes = [
   {
     path: "",
@@ -46,6 +50,23 @@ export const MasterRoutes: Routes = [
       {
         path: "process_family",
         component: ProcessFamilyComponent,
+      },
+      {
+        path: "process_type",
+        component: ProcessTypeComponent,
+      },
+
+      {
+        path: "shelf_life",
+        component: ShelfLifeComponent,
+      },
+      {
+        path: "shrink_age",
+        component: ShrinkAgeComponent,
+      },
+      {
+        path: "trimming",
+        component: TrimmingComponent,
       },
     ],
   },

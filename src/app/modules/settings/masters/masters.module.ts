@@ -35,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ProcessTypeComponent } from './process-type/process-type.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     AddShrinkAgeComponent,
     AddThicknessComponent,
     AddTrimmingComponent,
-    AddUnitInchargeComponent
+    AddUnitInchargeComponent,
+    ProcessTypeComponent
   ],
   imports: [
     CommonModule,

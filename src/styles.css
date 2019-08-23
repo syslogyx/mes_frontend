@@ -149,3 +149,11 @@ mat-tab-group {
 .p-b-15 {
   padding-bottom: 15px;
 }
+
+.p-t-70 {
+  padding-top: 70px;
+}
+
+.ct-label {
+  font-weight: 600;
+}
