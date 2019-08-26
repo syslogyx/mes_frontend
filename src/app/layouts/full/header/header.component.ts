@@ -19,15 +19,15 @@ export class AppHeaderComponent {
     {
       round: 'notifications',
       icon: 'ti-bell',
-      title: 'Its time to change shear',
-      subject: 'KUND038K',
+      title: 'Its time to change Side Trimming Knife',
+      subject: '',
       time: '30/07/2019 9:30 AM'
     },
     {
       round: 'notifications',
       icon: 'ti-bell',
       title: 'Campaign Changed',
-      subject: 'KUND038K',
+      subject: 'Current ID : CAMP01',
       time: '30/07/2019 9:30 AM'
     },
     {
