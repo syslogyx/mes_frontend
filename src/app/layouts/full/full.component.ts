@@ -16,6 +16,7 @@ import { AppHeaderComponent } from "./header/header.component";
 import { AppSidebarComponent } from "./sidebar/sidebar.component";
 
 import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
+import { AppConstants } from "../../config/app-constants";
 /** @title Responsive sidenav */
 @Component({
   selector: "app-full-layout",
@@ -33,6 +34,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
   danger: boolean;
   showHide: boolean;
   sidebarOpened;
+  appVersionNo: string;
 
   public config: PerfectScrollbarConfigInterface = {};
   private _mobileQueryListener: () => void;
@@ -46,6 +48,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
     this.mobileQuery = media.matchMedia("(min-width: 768px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.appVersionNo = AppConstants.VERSION;
   }
 
   ngOnDestroy(): void {

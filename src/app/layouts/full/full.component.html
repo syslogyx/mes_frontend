@@ -59,7 +59,8 @@
         <!-- Right sidebar toggle - style you can find in rightsidebar.component.scss -->
         <!-- ============================================================== -->
         <button (click)="end.toggle()" mat-icon-button class="ml-xs overflow-visible">
-            <mat-icon>settings</mat-icon>
+            <!-- <mat-icon>settings</mat-icon> -->
+            <i class="fa fa-cog fa-spin settings-icon"></i>
         </button>
     </mat-toolbar>
     <!-- ============================================================== -->
@@ -130,11 +131,19 @@
 
                 <router-outlet>
                     <app-spinner></app-spinner>
+                    <!-- <app-jetman-loader></app-jetman-loader> -->
                 </router-outlet>
-
             </div>
-
+            <footer class="main-footer" style="z-index: 1053;">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> {{appVersionNo}}
+                </div>
+                <strong class="p-l-20">Powered By : <a href="http://www.syslogyx.com/" target="_blank">Syslogyx
+                        Technologies Pvt.
+                        Ltd.</a></strong>
+            </footer>
         </mat-sidenav-content>
+
         <!-- ============================================================== -->
         <!-- Page container - style you can find in pages.scss -->
         <!-- ============================================================== -->

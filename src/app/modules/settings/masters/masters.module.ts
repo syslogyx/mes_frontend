@@ -65,7 +65,7 @@ import { ProcessTypeComponent } from './process-type/process-type.component';
     AddThicknessComponent,
     AddTrimmingComponent,
     AddUnitInchargeComponent,
-    ProcessTypeComponent
+    ProcessTypeComponent,
   ],
   imports: [
     CommonModule,
@@ -78,7 +78,7 @@ import { ProcessTypeComponent } from './process-type/process-type.component';
     ReactiveFormsModule,
     FileUploadModule,
     MatTreeModule,
-    MatDatepickerModule,
+    MatDatepickerModule
   ]
 })
 export class MastersModule { }

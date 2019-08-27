@@ -22,6 +22,7 @@ import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
 
 import { SharedModule } from "./shared/shared.module";
 import { SpinnerComponent } from "./shared/spinner.component";
+import { JetmanLoaderComponent } from './common/jetman-loader/jetman-loader.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -37,6 +38,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SpinnerComponent,
     AppBlankComponent,
     AppSidebarComponent,
+    JetmanLoaderComponent,
   ],
   imports: [
     BrowserModule,
